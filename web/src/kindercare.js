@@ -19,3 +19,13 @@ function goToPupilsDashboard() {
 function goToAssignmentsDashboard() {
   location.href = "./assignment/assignments.php";
 }
+
+// THis toggles to show the password
+function togglePassword() {
+  const passwordField = document.getElementById("password");
+  if (passwordField.type === "password") {
+    passwordField.type = "text";
+  } else {
+    passwordField.type = "password";
+  }
+}
