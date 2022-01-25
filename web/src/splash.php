@@ -11,7 +11,7 @@
     <title>THE NOIS | Results Complaints Management System</title>
 
     <!-- CSS -->
-    <link href="./dist/output.css" rel="stylesheet" />
+    <link href="../css/kindercare.css" rel="stylesheet" />
     <!-- JS -->
     <script src="kindercare.js"></script>
   </head>

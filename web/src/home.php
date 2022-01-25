@@ -10,7 +10,7 @@
     <title>KINDERCARE LEARNING PLATFORM</title>
 
     <!-- CSS -->
-    <link href="./dist/output.css" rel="stylesheet" />
+    <link href="../css/kindercare.css" rel="stylesheet" />
 
     <!-- JS -->
     <script src="kindercare.js"></script>

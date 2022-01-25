@@ -9,7 +9,7 @@
     <!-- Title -->
     <title>KLP | Register Pupil</title>
     <!-- CSS -->
-    <link href="../../dist/output.css" rel="stylesheet" />
+    <link href="../../css/kindercare.css" rel="stylesheet" />
 
     <!-- JS -->
     <script src="../kindercare.js"></script>
@@ -22,7 +22,7 @@
       <nav
         class="md:flex md:justify-between lg:flex lg:justify-between md:px-4 px-2 py-5 fixed top-0 left-0 right-0 bg-blue">
         <!-- back -->
-        <a href="../home.html"
+        <a href="../home.php"
           class="duration-300 transition-colors flex md:justify-start lg:justify-start justify-center items-center space-x-2 text-white hover:text-amber hover:no-underline hover:cursor-pointer">
           <svg width="24" height="24" viewBox="0 0 24 24" class="fill-current w-5 h-5">
             <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
