@@ -66,217 +66,221 @@
             <label class="block mt-4">
               <span class="block text-sm font-medium text-white mb-4">Characters</span>
 
-              <!-- A -->
-              <div class="flex items-center ">
-                <input id="char_a" name="char_a" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
-                <label for="char_a" class="ml-2 block text-sm text-white">
-                  A
-                </label>
+              <div class=" md:grid-cols-2 lg:grid-cols-2 grid-cols-1 gap-2 sm:max-w-6xl max-w-6xl mx-auto grid">
 
+
+                <!-- A -->
+                <div class="flex items-center ">
+                  <input id="char_a" name="char_a" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
+                  <label for="char_a" class="ml-2 block text-sm text-white">
+                    A
+                  </label>
+
+                </div>
+
+                <!-- B -->
+                <div class="flex items-center ">
+                  <input id="char_b" name="char_b" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
+                  <label for="char_b" class="ml-2 block text-sm text-white">
+                    B
+                  </label>
+
+                </div>
+                <!-- C -->
+                <div class="flex items-center ">
+                  <input id="char_c" name="char_c" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
+                  <label for="char_c" class="ml-2 block text-sm text-white">
+                    C
+                  </label>
+
+                </div>
+                <!-- D -->
+                <div class="flex items-center ">
+                  <input id="char_d" name="char_d" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
+                  <label for="char_d" class="ml-2 block text-sm text-white">
+                    D
+                  </label>
+
+                </div>
+                <!-- E -->
+                <div class="flex items-center ">
+                  <input id="char_e" name="char_e" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
+                  <label for="char_e" class="ml-2 block text-sm text-white">
+                    E
+                  </label>
+
+                </div>
+                <!-- F -->
+                <div class="flex items-center ">
+                  <input id="char_f" name="char_f" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
+                  <label for="char_f" class="ml-2 block text-sm text-white">
+                    F
+                  </label>
+
+                </div>
+                <!-- G -->
+                <div class="flex items-center ">
+                  <input id="char_g" name="char_g" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
+                  <label for="char_g" class="ml-2 block text-sm text-white">
+                    G
+                  </label>
+
+                </div>
+                <!--H -->
+                <div class="flex items-center ">
+                  <input id="char_h" name="char_h" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
+                  <label for="char_h" class="ml-2 block text-sm text-white">
+                    H
+                  </label>
+
+                </div>
+                <!-- I -->
+                <div class="flex items-center ">
+                  <input id="char_i" name="char_i" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
+                  <label for="char_i" class="ml-2 block text-sm text-white">
+                    I
+                  </label>
+
+                </div>
+                <!-- J -->
+                <div class="flex items-center ">
+                  <input id="char_j" name="char_j" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
+                  <label for="char_j" class="ml-2 block text-sm text-white">
+                    J
+                  </label>
+
+                </div>
+                <!-- K -->
+                <div class="flex items-center ">
+                  <input id="char_k" name="char_k" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
+                  <label for="char_k" class="ml-2 block text-sm text-white">
+                    K
+                  </label>
+
+                </div>
+                <!-- L -->
+                <div class="flex items-center ">
+                  <input id="char_l" name="char_l" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
+                  <label for="char_l" class="ml-2 block text-sm text-white">
+                    L
+                  </label>
+
+                </div>
+                <!-- M -->
+                <div class="flex items-center ">
+                  <input id="char_m" name="char_m" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
+                  <label for="char_m" class="ml-2 block text-sm text-white">
+                    M
+                  </label>
+
+                </div>
+                <!-- N -->
+                <div class="flex items-center ">
+                  <input id="char_n" name="char_n" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
+                  <label for="char_n" class="ml-2 block text-sm text-white">
+                    N
+                  </label>
+
+                </div>
+                <!-- O -->
+                <div class="flex items-center ">
+                  <input id="char_o" name="char_o" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
+                  <label for="char_o" class="ml-2 block text-sm text-white">
+                    O
+                  </label>
+
+                </div>
+                <!-- P -->
+                <div class="flex items-center ">
+                  <input id="char_p" name="char_p" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
+                  <label for="char_p" class="ml-2 block text-sm text-white">
+                    P
+                  </label>
+
+                </div>
+                <!-- Q -->
+                <div class="flex items-center ">
+                  <input id="char_q" name="char_q" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
+                  <label for="char_q" class="ml-2 block text-sm text-white">
+                    Q
+                  </label>
+
+                </div>
+                <!-- R -->
+                <div class="flex items-center ">
+                  <input id="char_r" name="char_r" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
+                  <label for="char_r" class="ml-2 block text-sm text-white">
+                    R
+                  </label>
+
+                </div>
+                <!-- S -->
+                <div class="flex items-center ">
+                  <input id="char_s" name="char_s" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
+                  <label for="char_s" class="ml-2 block text-sm text-white">
+                    S
+                  </label>
+
+                </div>
+                <!-- T -->
+                <div class="flex items-center ">
+                  <input id="char_t" name="char_t" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
+                  <label for="char_t" class="ml-2 block text-sm text-white">
+                    T
+                  </label>
+
+                </div>
+                <!-- U -->
+                <div class="flex items-center ">
+                  <input id="char_u" name="char_u" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
+                  <label for="char_u" class="ml-2 block text-sm text-white">
+                    U
+                  </label>
+
+                </div>
+                <!-- V -->
+                <div class="flex items-center ">
+                  <input id="char_v" name="char_v" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
+                  <label for="char_v" class="ml-2 block text-sm text-white">
+                    V
+                  </label>
+
+                </div>
+                <!-- W -->
+                <div class="flex items-center ">
+                  <input id="char_w" name="char_w" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
+                  <label for="char_w" class="ml-2 block text-sm text-white">
+                    W
+                  </label>
+
+                </div>
+                <!-- X -->
+                <div class="flex items-center ">
+                  <input id="char_x" name="char_x" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
+                  <label for="char_x" class="ml-2 block text-sm text-white">
+                    X
+                  </label>
+
+                </div>
+                <!-- Y -->
+                <div class="flex items-center ">
+                  <input id="char_y" name="char_y" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
+                  <label for="char_y" class="ml-2 block text-sm text-white">
+                    Y
+                  </label>
+
+                </div>
+                <!-- Z -->
+                <div class="flex items-center ">
+                  <input id="char_z" name="char_z" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
+                  <label for="char_z" class="ml-2 block text-sm text-white">
+                    Z
+                  </label>
+
+                </div>
               </div>
 
-              <!-- B -->
-              <div class="flex items-center ">
-                <input id="char_b" name="char_b" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
-                <label for="char_b" class="ml-2 block text-sm text-white">
-                  B
-                </label>
 
-              </div>
-              <!-- C -->
-              <div class="flex items-center ">
-                <input id="char_c" name="char_c" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
-                <label for="char_c" class="ml-2 block text-sm text-white">
-                  C
-                </label>
-
-              </div>
-              <!-- D -->
-              <div class="flex items-center ">
-                <input id="char_d" name="char_d" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
-                <label for="char_d" class="ml-2 block text-sm text-white">
-                  D
-                </label>
-
-              </div>
-              <!-- E -->
-              <div class="flex items-center ">
-                <input id="char_e" name="char_e" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
-                <label for="char_e" class="ml-2 block text-sm text-white">
-                  E
-                </label>
-
-              </div>
-              <!-- F -->
-              <div class="flex items-center ">
-                <input id="char_f" name="char_f" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
-                <label for="char_f" class="ml-2 block text-sm text-white">
-                  F
-                </label>
-
-              </div>
-              <!-- G -->
-              <div class="flex items-center ">
-                <input id="char_g" name="char_g" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
-                <label for="char_g" class="ml-2 block text-sm text-white">
-                  G
-                </label>
-
-              </div>
-              <!--H -->
-              <div class="flex items-center ">
-                <input id="char_h" name="char_h" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
-                <label for="char_h" class="ml-2 block text-sm text-white">
-                  H
-                </label>
-
-              </div>
-              <!-- I -->
-              <div class="flex items-center ">
-                <input id="char_i" name="char_i" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
-                <label for="char_i" class="ml-2 block text-sm text-white">
-                  I
-                </label>
-
-              </div>
-              <!-- J -->
-              <div class="flex items-center ">
-                <input id="char_j" name="char_j" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
-                <label for="char_j" class="ml-2 block text-sm text-white">
-                  J
-                </label>
-
-              </div>
-              <!-- K -->
-              <div class="flex items-center ">
-                <input id="char_k" name="char_k" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
-                <label for="char_k" class="ml-2 block text-sm text-white">
-                  K
-                </label>
-
-              </div>
-              <!-- L -->
-              <div class="flex items-center ">
-                <input id="char_l" name="char_l" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
-                <label for="char_l" class="ml-2 block text-sm text-white">
-                  L
-                </label>
-
-              </div>
-              <!-- M -->
-              <div class="flex items-center ">
-                <input id="char_m" name="char_m" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
-                <label for="char_m" class="ml-2 block text-sm text-white">
-                  M
-                </label>
-
-              </div>
-              <!-- N -->
-              <div class="flex items-center ">
-                <input id="char_n" name="char_n" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
-                <label for="char_n" class="ml-2 block text-sm text-white">
-                  N
-                </label>
-
-              </div>
-              <!-- O -->
-              <div class="flex items-center ">
-                <input id="char_o" name="char_o" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
-                <label for="char_o" class="ml-2 block text-sm text-white">
-                  O
-                </label>
-
-              </div>
-              <!-- P -->
-              <div class="flex items-center ">
-                <input id="char_p" name="char_p" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
-                <label for="char_p" class="ml-2 block text-sm text-white">
-                  P
-                </label>
-
-              </div>
-              <!-- Q -->
-              <div class="flex items-center ">
-                <input id="char_q" name="char_q" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
-                <label for="char_q" class="ml-2 block text-sm text-white">
-                  Q
-                </label>
-
-              </div>
-              <!-- R -->
-              <div class="flex items-center ">
-                <input id="char_r" name="char_r" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
-                <label for="char_r" class="ml-2 block text-sm text-white">
-                  R
-                </label>
-
-              </div>
-              <!-- S -->
-              <div class="flex items-center ">
-                <input id="char_s" name="char_s" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
-                <label for="char_s" class="ml-2 block text-sm text-white">
-                  S
-                </label>
-
-              </div>
-              <!-- T -->
-              <div class="flex items-center ">
-                <input id="char_t" name="char_t" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
-                <label for="char_t" class="ml-2 block text-sm text-white">
-                  T
-                </label>
-
-              </div>
-              <!-- U -->
-              <div class="flex items-center ">
-                <input id="char_u" name="char_u" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
-                <label for="char_u" class="ml-2 block text-sm text-white">
-                  U
-                </label>
-
-              </div>
-              <!-- V -->
-              <div class="flex items-center ">
-                <input id="char_v" name="char_v" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
-                <label for="char_v" class="ml-2 block text-sm text-white">
-                  V
-                </label>
-
-              </div>
-              <!-- W -->
-              <div class="flex items-center ">
-                <input id="char_w" name="char_w" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
-                <label for="char_w" class="ml-2 block text-sm text-white">
-                  W
-                </label>
-
-              </div>
-              <!-- X -->
-              <div class="flex items-center ">
-                <input id="char_x" name="char_x" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
-                <label for="char_x" class="ml-2 block text-sm text-white">
-                  X
-                </label>
-
-              </div>
-              <!-- Y -->
-              <div class="flex items-center ">
-                <input id="char_y" name="char_y" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
-                <label for="char_y" class="ml-2 block text-sm text-white">
-                  Y
-                </label>
-
-              </div>
-              <!-- Z -->
-              <div class="flex items-center ">
-                <input id="char_z" name="char_z" type="checkbox" class="h-4 w-4 text-amber focus:ring-amber border-amber rounded" />
-                <label for="char_z" class="ml-2 block text-sm text-white">
-                  Z
-                </label>
-
-              </div>
-
-              
 
 
 
