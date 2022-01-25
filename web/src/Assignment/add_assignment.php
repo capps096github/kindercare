@@ -68,7 +68,7 @@
                <!-- Question -->
                <label class="block mt-4">
                  <span class="block text-sm font-medium text-white">Question</span>
-                 <input type="text" name="question" placeholder="Your Question e.g Draw letters A-H" class="text-blue mt-1 w-full px-3 py-2 bg-white border border-white rounded-md text-sm shadow-sm
+                 <input type="text" name="question" placeholder="Your Question e.g Draw letters A-H (Not exceeding 8 characters)" class="text-blue mt-1 w-full px-3 py-2 bg-white border border-white rounded-md text-sm shadow-sm
                   placeholder-blue/50 focus:outline-none focus:border-amber focus:ring-1 focus:ring-amber" required />
                </label>
 
