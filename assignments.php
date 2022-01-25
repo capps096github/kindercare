@@ -22,7 +22,7 @@
       <nav
         class="md:flex md:justify-between lg:flex lg:justify-between md:px-4 px-2 py-5 fixed top-0 left-0 right-0 bg-blue">
         <!-- back -->
-        <a href="../home.html"
+        <a href="../home.php"
           class="duration-300 transition-colors flex md:justify-start lg:justify-start justify-center items-center space-x-2 text-white hover:text-amber hover:no-underline hover:cursor-pointer">
           <svg width="24" height="24" viewBox="0 0 24 24" class="fill-current w-5 h-5">
             <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
@@ -45,7 +45,7 @@
 
         <!--Register Pupil -->
         <div class="space-x-2 flex justify-center items-center mt-4 md:mt-0">
-          <a href="add_assignment.html"
+          <a href="add_assignment.php"
             class="flex items-center rounded-md text-blue text-sm font-bold pl-2 pr-3 py-2 shadow-sm hover:text-blue hover:bg-white hover:no-underline normal-case px-5 bg-amber transition-colors duration-300">
             <svg width="20" height="20" fill="currentColor" class="mr-2" aria-hidden="true">
               <path

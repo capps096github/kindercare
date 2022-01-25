@@ -9,7 +9,7 @@
     <!-- Title -->
     <title>KINDERCARE | Teacher's Login</title>
     <!-- CSS -->
-    <link href="../../dist/output.css" rel="stylesheet" />
+    <link href="../../css/kindercare.css" rel="stylesheet" />
 
     <!-- JS -->
     <script src="../kindercare.js"></script>
@@ -90,7 +90,7 @@
               <!-- Log in -->
               <p class="tracking-tight text-center text-sm text-amber sm:mt-2 sm:text-sm md:mt-2 p-4 lg:mx-0 ">
                 Have no account?
-                <a  href="register.html"
+                <a  href="register.php"
                   class="font-extrabold text-white hover:cursor-pointer ml-2 underline hover:text-amber hover:underline duration-300"
                   title="Create your Account">
                   Create Account Instead.

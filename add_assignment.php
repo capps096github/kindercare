@@ -21,7 +21,7 @@
       <nav class="flex justify-between items-center py-4  px-2">
 
           <!-- back -->
-          <a href="assignments.html"
+          <a href="assignments.php"
             class="duration-300 transition-colors flex md:justify-start lg:justify-start justify-center items-center space-x-2 text-amber hover:text-white hover:no-underline hover:cursor-pointer">
             <svg width="24" height="24" viewBox="0 0 24 24" class="fill-current w-5 h-5">
               <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />

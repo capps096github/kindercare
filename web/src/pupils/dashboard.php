@@ -45,7 +45,7 @@
 
         <!--Register Pupil -->
         <div class="space-x-2 flex justify-center items-center mt-4 md:mt-0">
-          <a href="register_pupil.html"
+          <a href="register_pupil.php"
             class="flex items-center rounded-md text-blue text-sm font-bold pl-2 pr-3 py-2 shadow-sm hover:text-blue hover:bg-white hover:no-underline normal-case px-5 bg-amber transition-colors duration-300">
             <svg width="20" height="20" fill="currentColor" class="mr-2" aria-hidden="true">
               <path
