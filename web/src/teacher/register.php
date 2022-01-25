@@ -48,7 +48,7 @@
               <!-- TeacherID -->
               <label class="block mt-4">
                 <span class="block text-sm font-medium text-white">TeacherID</span>
-                <input type="text" name="teacherid" placeholder="Your TeacherID e.g TR234568KLP, TR2442358KLP,TR288568KLP"
+                <input type="text" name="teacher_id" placeholder="Your TeacherID e.g TR234568KLP, TR2442358KLP,TR288568KLP"
                   class="text-blue mt-1 w-full px-3 py-2 bg-white border border-white rounded-md text-sm shadow-sm
                   placeholder-blue/50 focus:outline-none focus:border-amber focus:ring-1 focus:ring-amber"
                   required />
