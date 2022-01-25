@@ -6,13 +6,6 @@ function goToHome() {
 
 // * Go to Splash
 function goToSplash(screen) {
-  switch (screen) {
-    case 'login':
-      break;
-
-    default:
-      break;
-  }
 
   location.href = "index.php";
 }
