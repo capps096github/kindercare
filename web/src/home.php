@@ -44,7 +44,7 @@
         <!-- Actions -->
         <div class="space-x-2 flex justify-center items-center mt-4 md:mt-0">
           <!-- Log out -->
-          <a href="splash.php" class="text-white bg-darkred  hover:text-red hover:bg-white rounded-md  px-5 py-3 text-sm bg-transparent
+          <a href="index.php" class="text-white bg-darkred  hover:text-red hover:bg-white rounded-md  px-5 py-3 text-sm bg-transparent
             transition-all duration-300">
             <i class="fas fa-sign-in-alt"></i>
             <span>LOGOUT</span>

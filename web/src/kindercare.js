@@ -6,7 +6,7 @@ function goToHome() {
 
 // * Go to Splash
 function goToSplash() {
-  location.href = "splash.php";
+  location.href = "index.php";
 }
 
 // * Go to Pupils Dashboard

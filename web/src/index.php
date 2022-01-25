@@ -1,5 +1,5 @@
 <?php
-require_once './db/db_init.php';
+require_once './db/init_db.php';
 ?>
 
 <!DOCTYPE html>
