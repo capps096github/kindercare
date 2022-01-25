@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS kindercare.pupils (
 -- assignments table
 CREATE TABLE IF NOT EXISTS kindercare.assignments (
   
-  `assignment_id` VARCHAR(100) PRIMARY KEY AUTO_INCREMENT,
+  `assignment_id` VARCHAR(100) AUTO_INCREMENT PRIMARY KEY,
   `characters` VARCHAR(30) NOT NULL,
   `character_no` INT NOT NULL,
   `start_date` DATE NOT NULL,
