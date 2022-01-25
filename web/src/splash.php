@@ -38,7 +38,7 @@
               KINDERCARE
             </h3>
 
-            <h3 class="text-white  text-xl font-bold mt-2 tracking-wide ">
+            <h3 class="text-amber  text-xl font-bold mt-2 tracking-wide ">
               LEARNING PLATFORM
             </h3>
              <h3 class="text-white  text-xl font-bold mt-2 tracking-tight ">
