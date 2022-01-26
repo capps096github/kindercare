@@ -31,8 +31,7 @@ VALUES
     `start_date` DATE NOT NULL,
     `start_time` TIME NOT NULL,
     `end_time` TIME NOT NULL,
-    `teacher_id` VARCHAR(30) NOT NULL,
-    `user_code` VARCHAR(30) NOT NULL
+    `teacher_id` VARCHAR(30) NOT NULL
   );
 -- assignmentscore table
   CREATE TABLE IF NOT EXISTS kindercare.assignmentscore (

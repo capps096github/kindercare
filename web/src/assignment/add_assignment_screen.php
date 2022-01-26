@@ -57,10 +57,26 @@ if (!isset($_SESSION["teacher_id"])) {
     <main class="mx-auto sm:max-w-4xl max-w-4xl px-4 sm:mt-5 sm:px-6 md:mt-8 lg:mt-10 lg:px-8 xl:mt-14">
       <div class="sm:text-center text-center items-center transition-colors duration-500 text-amber hover:text-white">
 
+        <?php
+        // check if success session is set then echo it out in a h2 tag 
+        if (isset($_SESSION['ass_success'])) {
+          echo "<h2 class='text-3xl tracking-tight mt-1 font-extrabold sm:text-3xl md:text-4xl mx-auto text-white hover:text-amber' >" . $_SESSION['ass_success'] . "</h2>";
+          echo "<p class='mt-2 font-bold text-white hover:text-amber'>Feel free to add another assignment </p>";
+          unset($_SESSION['ass_success']);
+        } else if (isset($_SESSION['error'])) {
+          echo "<h2 class='text-3xl tracking-tight mt-1 font-extrabold sm:text-3xl md:text-4xl mx-auto text-red hover:text-white' >" . $_SESSION['error'] . "</h2>";
+          unset($_SESSION['error']);
+        }
 
-        <h2 class="text-3xl tracking-tight mt-1 font-extrabold sm:text-3xl md:text-4xl mx-auto">
+        echo '<h2 class="text-3xl tracking-tight mt-4 font-extrabold sm:text-3xl md:text-4xl mx-auto">
           Add the Assignment Details below
-        </h2>
+        </h2>';
+
+
+        ?>
+
+
+
 
 
       </div>
@@ -68,11 +84,10 @@ if (!isset($_SESSION["teacher_id"])) {
       <!-- form div -->
       <div class="mt-10 justify-center items-center">
         <div class="max-w-xl mx-auto">
-          <form class="space-y-6 ">
-
+          <form class="space-y-6 " action="assignment_action.php" method="post">
             <!-- Question -->
             <label class="block mt-4">
-              <span class="block text-sm font-medium text-white mb-4">Characters</span>
+              <span class="block text-sm font-medium text-white mb-4">Characters (Not more than 8)</span>
 
               <div class=" md:grid-cols-2 lg:grid-cols-2 grid-cols-1 gap-2 sm:max-w-6xl max-w-6xl mx-auto grid">
 
@@ -300,26 +315,26 @@ if (!isset($_SESSION["teacher_id"])) {
             <!-- Start Date -->
             <label class="block mt-4">
               <span class="block text-sm font-medium text-white">Start Date</span>
-              <input type="datetime" name="start_date" placeholder="Your Start Date e.g Tuesday, 21st March,2022" class="text-blue mt-1 w-full px-3 py-2 bg-white border border-white rounded-md text-sm shadow-sm
+              <input type="date" name="start_date" placeholder="Your Start Date in format YYYY-MM-DD e.g 2022-12-13" class="text-blue mt-1 w-full px-3 py-2 bg-white border border-white rounded-md text-sm shadow-sm
                   placeholder-blue/50 focus:outline-none focus:border-amber focus:ring-1 focus:ring-amber" required />
             </label>
             <!-- Start Time -->
             <label class="block mt-4">
               <span class="block text-sm font-medium text-white">Start Time</span>
-              <input type="datetime" name="start_time" placeholder="Your Start Time e.g 20:00" class="text-blue mt-1 w-full px-3 py-2 bg-white border border-white rounded-md text-sm shadow-sm
+              <input type="time" name="start_time" placeholder="Your Start Time e.g 20:00 (24 hour format)" class="text-blue mt-1 w-full px-3 py-2 bg-white border border-white rounded-md text-sm shadow-sm
                   placeholder-blue/50 focus:outline-none focus:border-amber focus:ring-1 focus:ring-amber" required />
             </label>
             <!-- End Time -->
             <label class="block mt-4">
               <span class="block text-sm font-medium text-white">End Time</span>
-              <input type="datetime" name="end_time" placeholder="Your End Time e.g 23:00" class="text-blue mt-1 w-full px-3 py-2 bg-white border border-white rounded-md text-sm shadow-sm
+              <input type="time" name="end_time" placeholder="Your End Time e.g 23:00  (24 hour format)" class="text-blue mt-1 w-full px-3 py-2 bg-white border border-white rounded-md text-sm shadow-sm
                   placeholder-blue/50 focus:outline-none focus:border-amber focus:ring-1 focus:ring-amber" required />
             </label>
 
 
 
             <!-- Submit Button -->
-            <button type="submit" name="add_asgn_btn" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-bold rounded-md text-blue uppercase bg-amber hover:bg-white transition-colors duration-300">
+            <button type="submit" name="add_assignment_btn" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-bold rounded-md text-blue uppercase bg-amber hover:bg-white transition-colors duration-300">
               <span class="absolute left-0 inset-y-0 flex items-center pl-3">
 
 

@@ -38,11 +38,10 @@ $sql_assignments = "CREATE TABLE IF NOT EXISTS kindercare.assignments (
   `assignment_id` INT(30) AUTO_INCREMENT PRIMARY KEY,
   `characters` VARCHAR(30) NOT NULL,
   `character_no` INT NOT NULL,
-  `start_date` DATE NOT NULL,
+  `start_datex` DATE NOT NULL,
   `start_time` TIME NOT NULL,
   `end_time` TIME NOT NULL,
-  `teacher_id` VARCHAR(30) NOT NULL,
-  `user_code` VARCHAR(30) NOT NULL
+  `teacher_id` VARCHAR(30) NOT NULL
 );";
 
 

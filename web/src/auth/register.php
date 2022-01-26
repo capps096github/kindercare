@@ -28,7 +28,7 @@ if (isset($_POST['create_btn'])) {
 
 
     // sql command
-    $sql_data = "INSERT INTO
+    $sql_data = "INSERT IGNORE INTO
        kindercare.teachers (teacher_id, fname, lname, passwordx)
         VALUES ('$teacher_id', '$first_name', '$last_name', '$password');";
 
