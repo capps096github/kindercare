@@ -32,7 +32,6 @@ if (!isset($_SESSION["teacher_id"])) {
 
 <body class="bg-lightblue font-spartan">
 
-<a href="./teacher/login.php">c</a>
 
   <section class="flex flex-col justify-between h-screen">
     <!-- Nav Bar -->
@@ -50,10 +49,22 @@ if (!isset($_SESSION["teacher_id"])) {
         </div>
       </span>
 
+
+      <div class="space-x-2 flex justify-center items-center mt-4 md:mt-0">
+
+        <p class="text-white font-bold text-sm md:text-base md:text-right md:mr-4 mr-2">
+          <?php
+          if (isset($_SESSION['teacher_id'])) {
+            echo "Welcome, Tr. " . $_SESSION['first_name'] . " " . $_SESSION['last_name'];
+          }
+          ?>
+        </p>
+      </div>
+
       <!-- Actions -->
       <div class="space-x-2 flex justify-center items-center mt-4 md:mt-0">
         <!-- Log out -->
-        <a href="index.php" class="text-white bg-darkred  hover:text-red hover:bg-white rounded-md  px-5 py-3 text-sm bg-transparent
+        <a href="./auth/logout.php" class="text-white bg-darkred  hover:text-red hover:bg-white rounded-md  px-5 py-3 text-sm bg-transparent
             transition-all duration-300">
           <i class="fas fa-sign-in-alt"></i>
           <span>LOGOUT</span>

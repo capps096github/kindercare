@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION["teacher_id"])) {
+  header("Location: ../teacher/login.php");
+  exit();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 

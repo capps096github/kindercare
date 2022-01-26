@@ -1,10 +1,9 @@
 <?php
+// ---------------------- Create Account PHP -------------------- //
 // Start the session
 session_start();
 
-
-if (isset($_POST['signup_btn'])) {
-
+if (isset($_POST['create_btn'])) {
 
   // check if the terms checkbox is checked
   if (isset($_POST['terms'])) {
@@ -21,73 +20,43 @@ if (isset($_POST['signup_btn'])) {
       die("Connection failed: " . $conn->connect_error);
     }
 
-
-    // check if a database called nois exists
-    $sql = "CREATE DATABASE IF NOT EXISTS nois";
-
-    if ($conn->query($sql) === TRUE) {
-      // echo "Database created successfully";
-
-      // prevent SQL injection
-      $student_number = $conn->real_escape_string($_POST['student_number']);
-      $username = $conn->real_escape_string($_POST['username']);
-      $passwordx = $conn->real_escape_string($_POST['password']);
-      $email = $conn->real_escape_string($_POST['email']);
-
-      // courses
-      $first_course = $conn->real_escape_string($_POST['first_course']);
-      $second_course = $conn->real_escape_string($_POST['second_course']);
+    // prevent SQL injection while getting the data from the form
+    $teacher_id = $conn->real_escape_string($_POST['teacher_id']);
+    $first_name = $conn->real_escape_string($_POST['first_name']);
+    $last_name = $conn->real_escape_string($_POST['last_name']);
+    $password = $conn->real_escape_string($_POST['password']);
 
 
-      //  use the nois db
-      $conn->select_db('nois');
+    // sql command
+    $sql_data = "INSERT INTO
+       kindercare.teachers (teacher_id, fname, lname, passwordx)
+        VALUES ('$teacher_id', '$first_name', '$last_name', '$password');";
 
+    //  use the kindercare db
+    $conn->select_db('kindercare');
 
-      // create table if it doesn't exist
-      $sql = "CREATE TABLE IF NOT EXISTS nois.students (
-                student_number INT(10) UNSIGNED PRIMARY KEY,
-                username VARCHAR(30) NOT NULL,
-                passwordx VARCHAR(30) NOT NULL,
-                email VARCHAR(30) NOT NULL,
-                first_course VARCHAR(30) ,
-                second_course VARCHAR(30) 
-                );";
+    // insert data query
+    if ($conn->query($sql_data) === TRUE) {
+      // echo "New record created successfully";
 
+      // set sessions
+      $_SESSION['teacher_id'] = $teacher_id;
+      $_SESSION['first_name'] = $first_name;
+      $_SESSION['last_name'] = $last_name;
 
-      // check if table students exists then insert data
-      if ($conn->query($sql) === TRUE) {
-        // echo "Table students created successfully";
-
-        // insert a student into the table only if the student number is not already in the table
-
-        $sql = "INSERT INTO nois.students 
-                VALUES ('$student_number','$username', '$passwordx', '$email', '$first_course', '$second_course') ;";
-
-        if ($conn->query($sql) === TRUE) {
-          // echo "New record created successfully";  
-
-          // set new session variables from the data in the database i.e student_number, username, email
-          $_SESSION['student_number'] = $student_number;
-          $_SESSION['username'] = $username;
-          $_SESSION['email'] = $email;
-
-          header("Location: ../../dashboards/student/students_dashboard.php");
-          exit();
-        } else {
-          echo "Error: " . $sql . "<br>" . $conn->error;
-          header("Location: ../../login/students_login.php");
-          exit();
-        }
-      } else {
-        echo "Error creating table: " . $conn->error;
-      }
+      // redirect to the home screen
+      header("Location: ../home.php");
     } else {
-      echo "Error creating database: " . $conn->error;
+      echo "Error: " . $sql_data . "<br>" . $conn->error;
     }
+
+
     $conn->close();
+    exit();
   } else {
     echo "Please agree to the terms and conditions";
 
-    header("Location: ../../register/students_register.php");
+    // refresh the register page
+    header("Location: ../teacher/register.php");
   }
 }
