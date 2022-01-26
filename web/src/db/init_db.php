@@ -48,6 +48,7 @@ $sql_assignments = "CREATE TABLE IF NOT EXISTS kindercare.assignments (
 // assignment score
 $sql_assignmentscore = "CREATE TABLE IF NOT EXISTS kindercare.assignmentscore (
   `assignment_id` VARCHAR(100) PRIMARY KEY,
+  `score` INT(3) NOT NULL,
   `comment` VARCHAR(100) NOT NULL,
   `user_code` VARCHAR(30) NOT NULL
 );";
@@ -59,6 +60,14 @@ $sql_registerpupils = "CREATE TABLE IF NOT EXISTS kindercare.registeredpupils (
   `lname` VARCHAR(100) NOT NULL,
   `phone_no` INT(30) NOT NULL,
   `status` VARCHAR(30) NOT NULL DEFAULT 'Activated'
+);";
+
+// register pupils
+$sql_requests = "CREATE TABLE IF NOT EXISTS kindercare.requests (
+  `user_code` VARCHAR(30) PRIMARY KEY,
+  `fname` VARCHAR(100) NOT NULL,
+  `lname` VARCHAR(100) NOT NULL,
+  `phone_no` INT(30) NOT NULL
 );";
 
 
@@ -98,6 +107,13 @@ if ($conn->query($sql_db) === TRUE) {
   // register pupils
   if ($conn->query($sql_registerpupils) === TRUE) {
     // echo "Table registeredpupils created successfully";
+  } else {
+    echo "Error creating table: " . $conn->error;
+  }
+
+  // requests
+  if ($conn->query($sql_requests) === TRUE) {
+    // echo "Table requests created successfully";
   } else {
     echo "Error creating table: " . $conn->error;
   }
