@@ -22,7 +22,7 @@ if ($conn->select_db('kindercare') === TRUE) {
   // get the result
   $result = $conn->query($sql);
 
-  if ( $result === TRUE) {
+  if ($conn->query($sql) === TRUE) {
   
   // row count
   $row_count = $result->num_rows;
