@@ -1,7 +1,7 @@
 function goToHome() {
   setTimeout(function () {
     location.href = "home.php";
-  }, 1000);
+  }, 2000);
 }
 
 // * Go to Splash
