@@ -101,7 +101,7 @@ if (!isset($_SESSION["teacher_id"])) {
             <!-- Phone Number -->
             <label class="block mt-4">
               <span class="block text-sm font-medium text-white">Phone Number</span>
-              <input type="number" name="phone_no" placeholder="Your Phone Number e.g 0758294212, 0700444642, 0789601443" class="text-blue mt-1 w-full px-3 py-2 bg-white border border-white rounded-md text-sm shadow-sm
+              <input type="text" name="phone_no" placeholder="Your Phone Number e.g 0758294212, 0700444642, 0789601443" class="text-blue mt-1 w-full px-3 py-2 bg-white border border-white rounded-md text-sm shadow-sm
                   placeholder-blue/50 focus:outline-none focus:border-amber focus:ring-1 focus:ring-amber" required />
             </label>
 
