@@ -12,7 +12,7 @@ require_once './db/init_db.php';
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Title -->
-  <title>THE NOIS | Results Complaints Management System</title>
+  <title>KLP | KINDERCARE LEARNING PLATFORM</title>
 
   <!-- CSS -->
   <link href="../css/kindercare.css" rel="stylesheet" />
