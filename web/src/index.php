@@ -51,12 +51,7 @@ require_once './db/init_db.php';
       </div>
     </main>
 
-
   </section>
-
-
-
-
 </body>
 
 </html>
