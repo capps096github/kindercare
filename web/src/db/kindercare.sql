@@ -44,6 +44,6 @@ VALUES
     `user_code` VARCHAR(30) PRIMARY KEY,
     `fname` VARCHAR(100) NOT NULL,
     `lname` VARCHAR(100) NOT NULL,
-    `phone_no` INT(30) NOT NULL,
+    `phone_no` VARCHAR(30) NOT NULL,
     `status` VARCHAR(30) NOT NULL DEFAULT 'Activated'
   );
