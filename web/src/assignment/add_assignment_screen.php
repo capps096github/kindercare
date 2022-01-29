@@ -38,7 +38,7 @@ if (!isset($_SESSION["teacher_id"])) {
       </a>
 
       <!-- Logo -->
-      <span class="hover:cursor-pointer space-x-2 flex justify-center items-center mt-4 md:mt-0" title="NOIS">
+      <span class="hover:cursor-pointer space-x-2 flex justify-center items-center mt-4 md:mt-0" title="">
         <div class="flex text-white hover:text-amber hover:underline items-center space-x-2">
 
 
