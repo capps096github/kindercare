@@ -98,7 +98,7 @@ if (!isset($_SESSION["teacher_id"])) {
           <h3 class="text-blue  text-xl font-bold mt-2 tracking-wide ">
             LEARNING PLATFORM
           </h3>
-          <h3 class="text-blue  text-xl font-bold mt-2 tracking-tight ">
+          <h3 class="text-purple  text-xl font-bold mt-2 tracking-tight ">
             (KLP)
           </h3>
         </div>
