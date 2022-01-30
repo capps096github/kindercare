@@ -106,7 +106,7 @@ if ($conn->select_db('kindercare') === TRUE) {
                         </span>
     </td>
     <td class="px-6 py-4 whitespace-nowrap text-sm ">
-        0' . $db_phonenumber . '
+        ' . $db_phonenumber . '
     </td>
                       ';
 
