@@ -83,7 +83,7 @@ if (!isset($_SESSION["teacher_id"])) {
             <!-- User Code -->
             <label class="block mt-4">
               <span class="block text-sm font-medium text-white">User Code</span>
-              <input type="text" name="user_code" placeholder="Your User Code e.g 234568KLP, 2442358KLP,288568KLP" class="text-blue mt-1 w-full px-3 py-2 bg-white border border-white rounded-md text-sm shadow-sm
+              <input type="text" name="user_code" placeholder="Your User Code e.g 2009KLP, 2006KLP,2002KLP" class="text-blue mt-1 w-full px-3 py-2 bg-white border border-white rounded-md text-sm shadow-sm
                   placeholder-blue/50 focus:outline-none focus:border-amber focus:ring-1 focus:ring-amber" required />
             </label>
             <!-- First Name -->
