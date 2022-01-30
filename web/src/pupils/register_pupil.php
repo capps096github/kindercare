@@ -132,7 +132,7 @@ if (!isset($_SESSION["teacher_id"])) {
     <!-- Footer -->
     <footer class="mt-10 w-full bg-blue max-w-container mx-auto py-6 text-center space-y-2 items-center justify-center text-sm ">
       <p class="text-amber hover:text-white font-bold">
-        &copy; 2022 - KinderCare Learning Platform | All rights Reserved
+        &copy; 2022 - *KinderCare Learning Platform* | All rights Reserved
       </p>
 
     </footer>
