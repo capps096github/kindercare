@@ -13,7 +13,11 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="C:/Program Files/CodeBlocks/MinGW/include" />
 				</Compiler>
+				<Linker>
+					<Add library="C:/Program Files/CodeBlocks/MinGW/lib/libmysql.a" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/cmd" prefix_auto="1" extension_auto="1" />
