@@ -84,8 +84,8 @@ if (!isset($_SESSION["teacher_id"])) {
       <!-- form div -->
       <div class="mt-10 justify-center items-center">
         <div class="max-w-xl mx-auto">
-          <!-- <form class="space-y-6 " action="assignment_action.php" method="post"> -->
-          <form class="space-y-6 " action="add_assignment.php" method="post">
+          <!-- <form class="space-y-6 " action="add_assignment.php" method="post"> -->
+          <form class="space-y-6 " action="assignment_action.php" method="post">
             <!-- Question -->
             <label class="block mt-4">
               <span class="block text-sm font-medium text-white mb-4">Characters (Not more than 8)</span>
@@ -356,7 +356,13 @@ if (!isset($_SESSION["teacher_id"])) {
       </div>
     </main>
 
-    <?php require_once 'footer.php' ?>
+    <!-- Footer -->
+    <footer class="mt-10 w-full bg-blue max-w-container mx-auto py-6 text-center space-y-2 items-center justify-center text-sm ">
+      <p class="text-amber hover:text-white font-bold">
+        &copy; 2022 - KinderCare Learning Platform | All rights Reserved
+      </p>
+
+    </footer>
   </section>
 </body>
 

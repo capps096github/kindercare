@@ -82,6 +82,12 @@ if ($conn->select_db('kindercare') === TRUE) {
       // usercode parameter to be passed to the url and accessed via get method
       $user_code =  "user_code=$db_usercode";
 
+      // assignment id parameter to be passed to the url and accessed via get method
+      $assignment_id =  "assignment_id=$db_assignment_id";
+
+      // string with all the parameters
+      $user_code_and_assignment_id = $user_code . "&" . $assignment_id;
+
       // get the pupil from the registered pupils table where the user_code matches
       $sql_pupil = "SELECT * FROM kindercare.registeredpupils WHERE user_code = '$db_usercode'";
 
@@ -98,7 +104,7 @@ if ($conn->select_db('kindercare') === TRUE) {
 
 
       // table rows
-      echo '<form action="add_comment.php?' . $user_code . '" method="post">
+      echo '<form action="add_comment.php?' . $user_code_and_assignment_id . '" method="post">
        <tr>
                       <td class="px-6 py-4">
                         <p class="text-sm font-bold text-left text-blue">

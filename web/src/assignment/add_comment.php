@@ -21,11 +21,14 @@ if ($conn->select_db('kindercare') === TRUE) {
   // get usercode from the url
   $usercode = $_GET['user_code'];
 
+  // get the assignment_id from the url
+  $assignment_id = $_GET['assignment_id'];
+
   // get via post the comment from the comment dropdown menu while prventing sql injection
   $comment = mysqli_real_escape_string($conn, $_POST['comment']);
 
 
-//  print comment
+  //  print comment
   echo '<div class="bg-white shadow overflow-hidden sm:rounded-lg">
         <div class="px-4 py-5 border-b border-darkred/20">
           <h3 class="text-xl font-bold leading-tight text-darkred">
@@ -34,14 +37,14 @@ if ($conn->select_db('kindercare') === TRUE) {
         </div>
         <div class="px-4 py-5">
           <p class="text-darkred">
-            '.$comment.'
+            ' . $comment . '
           </p>
         </div>
       </div>';
 
 
   // update the assignmentscore table to have the new comment
-  $sql = "UPDATE `assignmentscore` SET `comment` = '$comment' WHERE `user_code` = '$usercode';";
+  $sql = "UPDATE `assignmentscore` SET `comment` = '$comment' WHERE `user_code` = '$usercode' AND `assignment_id` = '$assignment_id';";
 
   // get the result
   $result = $conn->query($sql);

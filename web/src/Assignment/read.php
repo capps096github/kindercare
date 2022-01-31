@@ -29,9 +29,11 @@ while (!$myFile->eof()) {
 
   echo $line . PHP_EOL;
 
+  // assignment_id	score	comment	user_code	
+
   // sql command to insert data into the db
   $sql_data = "INSERT IGNORE INTO 
-        kindercare.registeredpupils (	user_code,fname,lname,phone_no,status)
+        kindercare.assignmentscore (assignment_id, score, comment, user_code)
          VALUES   " .  $line . ";";
 
   //  use the kindercare db
@@ -41,7 +43,7 @@ while (!$myFile->eof()) {
   if ($conn->query($sql_data) === TRUE) {
 
     // set session success
-    echo "Pupil Added Successfully Added!";
+    echo "Pupil MArk Added Successfully Added!";
 
 
     // redirect to the add assingnment screen

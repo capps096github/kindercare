@@ -9,7 +9,6 @@ session_start();
 
 
 $filename = '../../db/assignments.txt';
-// $pupil_string = "Add this to the file\n";
 
 if (isset($_POST['add_assignment_btn'])) {
 
