@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+
+#include "stringx.c"
+
 int main()
 {
 
@@ -14,14 +17,18 @@ int main()
     exit(1);
   }else{
     printf("File opened successfully\n");
-    // get the file contents and print them out
-    char ch;
-    while ((ch = fgetc(fptr)) != EOF)
-    {
-      printf("%c", ch);
-    }
-    fclose(fptr);
 
+
+// get the file contents and convert them to a string
+
+    char *buffer = malloc(sizeof(char) * 100);
+
+    fgets(buffer, 100, fptr);
+
+    getAssignmentFromFileString(buffer);
+        // printf("%s", buffer);
+
+        fclose(fptr);
   }
 
   fclose(fptr);

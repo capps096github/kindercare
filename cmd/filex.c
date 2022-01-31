@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 // create an assignments struct with the following fields:
 //  characters, character_no, time_difference
 
@@ -10,11 +11,6 @@ struct ASSIGNMENTS {
   int character_no;
   int time_difference;
 };
-
-
-
-
-
 
 
 

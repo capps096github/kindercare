@@ -57,7 +57,7 @@ if (isset($_POST['add_assignment_btn'])) {
 
 
   // create a string from all the above variables (characters, character_no, time_difference)
-  $assignment_string = "(" . $char_string . "," . $char_count . "," . $time_difference . ")";
+  $assignment_string =  $char_string . "," . $char_count . "," . $time_difference ;
 
 
   // Let's make sure the file exists and is writable first.
