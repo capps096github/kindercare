@@ -51,7 +51,7 @@ if (!isset($_SESSION["teacher_id"])) {
 
       <!--Register Pupil -->
       <div class="space-x-2 flex justify-center items-center mt-4 md:mt-0">
-        <a href="add_assignment_screen.php" class="flex items-center rounded-md text-blue text-sm text-center font-bold pl-2 pr-3 py-2 shadow-sm hover:text-blue hover:bg-white hover:no-underline normal-case px-5 bg-amber transition-colors duration-300">
+        <a href="add_assignment_screen.php" class="flex items-center rounded-md text-blue text-sm text-center font-bold  pl-2 pr-3 py-2 shadow-sm hover:text-blue hover:bg-white hover:no-underline normal-case px-5 bg-amber transition-colors duration-300">
           <svg width="20" height="20" fill="currentColor" class="mr-2" aria-hidden="true">
             <path d="M10 5a1 1 0 0 1 1 1v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 1 1-2 0v-3H6a1 1 0 1 1 0-2h3V6a1 1 0 0 1 1-1Z" />
           </svg>
