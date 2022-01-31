@@ -1,5 +1,8 @@
 <?php
 
+// read the performance file
+require_once 'read_performance.php';
+
 // sql
 $servername = "localhost";
 $username = "root";
@@ -171,7 +174,6 @@ if ($conn->select_db('kindercare') === TRUE) {
 </div>
 ';
   } else {
-    //  No registered pupils
     echo '<div class="flex items-center justify-center text-xl font-bold text-center text-red underline items-center space-x-2">
 
     <svg class="w-10 h-10 fill-current " height="24" viewBox="0 0 24 24" width="24">

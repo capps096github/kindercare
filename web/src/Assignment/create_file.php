@@ -11,7 +11,7 @@ if (!file_exists("../../db")) {
 
 
 // create a file assignments.txt in the same directory
-if (!file_exists("../../db/assignments.txt") || !file_exists("../../db/registered_pupils.txt")) {
+if (!file_exists("../../db/assignments.txt") ) {
   $assign_file = fopen("../../db/assignments.txt", "w");
 
   fclose($assign_file);
