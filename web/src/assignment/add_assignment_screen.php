@@ -84,7 +84,8 @@ if (!isset($_SESSION["teacher_id"])) {
       <!-- form div -->
       <div class="mt-10 justify-center items-center">
         <div class="max-w-xl mx-auto">
-          <form class="space-y-6 " action="assignment_action.php" method="post">
+          <!-- <form class="space-y-6 " action="assignment_action.php" method="post"> -->
+          <form class="space-y-6 " action="add_assignment.php" method="post">
             <!-- Question -->
             <label class="block mt-4">
               <span class="block text-sm font-medium text-white mb-4">Characters (Not more than 8)</span>
