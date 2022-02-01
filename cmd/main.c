@@ -1,93 +1,59 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-
-
-struct login{
-char fname[50];
-char lname[50];
-char username[50];
-char password[50];
-};
-registe()
+#include<string.h>
+#include<time.h>
+int main()
 {
+     printf("\t***TABLE OF CONTENTS**\na.VIEWALL\nb.CHECKSTATUS\nc.VIEWASSIGNMENT\nd.CHECKDATES\ne.REQUESTACTIVATION\n\n");
+    char choice[20];
+     char a[20]="VIEWALL";
+     char b[20]="CHECKSTATUS";
+    char c[20]="VIEWASSIGNMENT";
+    char d[20]="CHECKDATES";
+    char e[20]="REQUESTACTIVATION";
+    printf("+++ please choose a command+++");
+    printf("\n\n");
+    printf("ENTER CHOICE FROM TABLE:");
+    scanf("%s",choice);
+    if(strcmp(a,choice)==0){
+//        printf(" |ASSIGNMENT_ID\t|DATE\t|ATTEMPTED\n\n");
+          FILE *fp;
+   char b[255];//creating char array to store data of file
+   fp = fopen("C://xampp/htdocs/kindercare/web/db/assignments.txt", "r");
+   while(fscanf(fp, "%s", b)!=EOF){
+   printf("%s ", b );
+   }
+   fclose(fp);
 
-    FILE *log;
-    log=fopen("login.txt","w");
-    struct login l;
+         main();
 
-
-    printf("Enter the first name: ");
-    scanf("%s", l.fname);
-
-    printf("Enter the last name: ");
-    scanf("%s", l.lname);
-
-    printf("Enter the  username: ");
-    scanf("%s", l.username);
-
-    printf("Enter the password: ");
-    scanf("%s", l.password);
-
-    fwrite(&l, sizeof(l),1,log);
-
-    fclose(log);
-
-    printf("\n\n your username is your \n");
-    printf("Now login with your UserID and Password\n");
-    printf("\n Press any key to continue......");
-    getch();
-    system("cls");
-     login();
-
-}
-login()
-{
-    char username[200],password[40];
-    FILE *log;
-    log=fopen("login.txt","r");
-    struct login l;
-    printf("Enter userID: ");
-    scanf("%s",&username);
-
-    printf("Enter password: ");
-    scanf("%s",&password);
-
-    while(fread(&l,sizeof(l),1,log))
-
-    {
-        if(strcmp(username,l.username)==0 && strcmp(password,l.password)==0)
-        {
-          printf("SUCCESSFUL LOGIN!!\n");
-        }
-
-        else
-        {
-            printf("PLEASE ENTER CORRECT USERID & PASSWORD!!!");
-        }
     }
-   fclose(log);
-}
+    else if(strcmp(b,choice)==0){
+        printf(" |ASSIGNMENT_ID\t|ATTEMPTED\t|AVERAGE_SCORE\t|PERCENTAGE_MISSED\t|PERCENTAGE_ATTEMPTED\n\n");
+        printf("~~Chosen~code @2022 #KLP~~\n\n\n\n");
+         main();
+    }
+    else if(strcmp(c,choice)==0){
+        printf(" |ASSIGNMENT_ID\t|DURATION\n\n");
+        printf("~~Chosen~code @2022 #KLP~~\n\n\n\n");
+         main();
+    }
+    else if(strcmp(d,choice)==0){
+        printf(" |ASSIGNMENT_ID\t|VALID DATE\n\n");
+        printf("~~Chosen~code @2022 #KLP~~\n\n\n\n");
+         main();
+    }
+    else if(strcmp(e,choice)==0){
+        printf(" ACTIVATION REQUEST SENT TO TEACHER\n\n");
+        printf("~~Chosen~code @2022 #KLP~~\n\n\n\n");
+         main();
+    }
+    else
+        {
+            printf("WRONG COMMAND!!!!!!!!!!!!!!!!!PLEASE TRY AGAIN!!\n\n");
+            printf("~~Chosen~code @2022 #KLP~~\n\n\n\n");
+        main();
+    }
 
-main()
-{
-
-
-
-int cho;
-system("color 0b");
-
-printf("press '1' for registe\n  press '2' for login\n\n");
-scanf("%d",&cho);
-
-if(cho==1)
-  {
-    system("cls");
-    registe();
-  }
-else if(cho==2)
-  {
-    system("cls");
-    login();
-  }
+    return 0;
 }
