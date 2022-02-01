@@ -96,8 +96,8 @@
       </div>
     </main>
 
-    <!-- Footer -->
-    <?php require_once 'footer.php' ?>
+      <!-- Footer -->
+      <?php require_once '../footer.php'; ?>
 
  
   </section>

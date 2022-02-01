@@ -58,5 +58,5 @@ if ($conn->select_db('kindercare') === TRUE) {
     header("Location: assignments.php");
   }
 } else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
+  echo "Error: ". "<br>" . $conn->error;
 }

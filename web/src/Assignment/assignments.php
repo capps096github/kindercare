@@ -102,6 +102,9 @@ if (!isset($_SESSION["teacher_id"])) {
     </main>
 
 
+      <!-- Footer -->
+      <?php require_once '../footer.php'; ?>
+
   </section>
 </body>
 
