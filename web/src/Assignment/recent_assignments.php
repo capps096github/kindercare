@@ -20,7 +20,7 @@ $teacher_id = $_SESSION['teacher_id'];
 // use the kindercare db
 if ($conn->select_db('kindercare') === TRUE) {
 
-  // get all pupils in the assignments table where teacher_id = $teacher_id
+  // get all pupils in the assignments' table where teacher_id = $teacher_id
   $sql = "SELECT * FROM kindercare.assignments WHERE assignments.teacher_id = '$teacher_id' ORDER BY assignments.assignment_id DESC;";
 
   // get the result
@@ -77,7 +77,7 @@ if ($conn->select_db('kindercare') === TRUE) {
       $db_characters = $row['characters'];
       // get the character_no
       $db_character_no = $row['character_no'];
-      // get the start_datex
+      // get the start_dates
       $db_start_date = $row['start_datex'];
       // get the start_time
       $db_start_time = $row['start_time'];

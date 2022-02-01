@@ -28,7 +28,7 @@ if (isset($_POST['register_btn'])) {
 
     // In our example we're opening $filename in append mode.
     // The file pointer is at the bottom of the file hence
-    // that's where $pupil_string will go when we fwrite() it.
+    // that's where $pupil_string will go when we write() it.
     if (!$fp = fopen($filename, 'a')) {
       echo "Cannot open file ($filename)";
       exit;

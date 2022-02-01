@@ -24,7 +24,7 @@ if ($conn->select_db('kindercare') === TRUE) {
   // get the assignment_id from the url
   $assignment_id = $_GET['assignment_id'];
 
-  // get via post the comment from the comment dropdown menu while prventing sql injection
+  // get via post the comment from the comment dropdown menu while preventing sql injection
   $comment = mysqli_real_escape_string($conn, $_POST['comment']);
 
 

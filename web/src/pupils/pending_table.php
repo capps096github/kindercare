@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 // use the kindercare db
 if ($conn->select_db('kindercare') === TRUE) {
 
-  // get all pupils in the requests table whose status is Deactivated
+  // get all pupils in the requests' table whose status is Deactivated
   $sql = "SELECT * FROM `requests`;";
 
   // get the result

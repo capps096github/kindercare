@@ -61,7 +61,7 @@ if (isset($_POST['login_btn'])) {
       $_SESSION['teacher_id'] = $db_teacher_id;
 
 
-      // go to Home Screen
+      // go Home Screen
       header("Location: ../home.php");
     } else {
       echo "Login Failed";

@@ -5,7 +5,7 @@ session_start();
 
 if (isset($_POST['create_btn'])) {
 
-  // check if the terms checkbox is checked
+  // check if the terms' checkbox is checked
   if (isset($_POST['terms'])) {
 
     // sql

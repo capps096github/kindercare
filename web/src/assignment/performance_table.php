@@ -91,7 +91,7 @@ if ($conn->select_db('kindercare') === TRUE) {
       // string with all the parameters
       $user_code_and_assignment_id = $user_code . "&" . $assignment_id;
 
-      // get the pupil from the registered pupils table where the user_code matches
+      // get the pupil from the registered pupils' table where the user_code matches
       $sql_pupil = "SELECT * FROM kindercare.registeredpupils WHERE user_code = '$db_usercode'";
 
       // get the result
@@ -144,7 +144,7 @@ if ($conn->select_db('kindercare') === TRUE) {
       }
 
 
-      //drop down of comments from excellent to poor
+      //drop of comments from excellent to poor
       echo '<td class="px-6 py-4 whitespace-nowrap text-center text-white font-bold text-sm ">
                         <select class="bg-blue border border-blue rounded-md shadow-sm  focus:border-blue transition duration-150 ease-in-out sm:text-sm sm:leading-5" id="comment" name="comment"
                           onchange="this.form.submit()">

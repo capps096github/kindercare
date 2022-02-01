@@ -29,13 +29,7 @@ if ($conn->select_db('kindercare') === TRUE) {
   $result = $conn->query($sql);
 
   // if the result is true print success else print error
-  if ($result === TRUE) {
-
     header("Location: dashboard.php");
-  } else {
-
-    header("Location: dashboard.php");
-  }
 } else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
+  echo "Error: " . "<br>" . $conn->error;
 }
