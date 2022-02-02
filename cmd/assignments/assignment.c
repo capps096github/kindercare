@@ -4,7 +4,6 @@
 // Attempt assignment logic
 #include "letters.c"
 
-
 void readFileAndAttemptAssignment();
 void getAssignmentFromFileString(char *assingment);
 
@@ -17,13 +16,13 @@ struct ASSIGNMENTS
   int time_difference;
 };
 
-
 void readFileAndAttemptAssignment()
 {
 
   FILE *fptr;
   // File path
-  char *filename = "E:\\Cephas Laravel\\kindercare\\web\\db\\assignments.txt";
+  // char *filename = "E:\\Cephas Laravel\\kindercare\\web\\db\\assignments.txt";
+  char *filename = "..\\web\\db\\assignments.txt";
 
   if ((fptr = fopen(filename, "r")) == NULL)
   {
@@ -33,7 +32,7 @@ void readFileAndAttemptAssignment()
   }
   else
   {
-    printf("File opened successfully\n");
+    printf("Assignment Opened successfully\n");
 
     // get the file contents and convert them to a string
     char *buffer = malloc(sizeof(char) * 100);
@@ -47,7 +46,6 @@ void readFileAndAttemptAssignment()
 
   fclose(fptr);
 }
-
 
 void getAssignmentFromFileString(char *assingment)
 {
