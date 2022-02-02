@@ -1,7 +1,8 @@
 <?php
 
 // for web
-$filename = '../../../db/performance.txt';
+// $filename = '../../../db/performance.txt';
+$filename = '../../db/performance.txt';
 
 // for cmd
 // $filename = './db/performance.txt';
@@ -35,12 +36,9 @@ if (file_exists($filename)) {
     // echo $line . PHP_EOL;
 
     // the data should be in the following format:
-      // (assignment_id, score, comment, user_code)
-      // ('assignment_id', 'score', 'comment', 'user_code')
-      // (1, 'score', 'comment', 'user_code')
-
-
-
+    // (assignment_id, score, comment, user_code)
+    // ('assignment_id', 'score', 'comment', 'user_code')
+    // (1, 'score', 'comment', 'user_code')
 
     // sql command to insert data into the db
     $sql_data = "INSERT IGNORE INTO 
