@@ -1,7 +1,7 @@
 <?php
 
 // for web
-$filename = '../../db/performance.txt';
+$filename = '../../../db/performance.txt';
 
 // for cmd
 // $filename = './db/performance.txt';

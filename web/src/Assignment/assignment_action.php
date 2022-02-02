@@ -71,6 +71,9 @@ if (isset($_POST['add_assignment_btn'])) {
         kindercare.assignments (characters, character_no, start_datex, start_time, end_time, teacher_id)
          VALUES ('$char_string', '$char_count', '$start_date', '$start_time', '$end_time', '$teacher_id');";
 
+  // read the assignment id from the db
+  $sql_read_id = "SELECT assignment_id FROM kindercare.assignments WHERE teacher_id = '$teacher_id' AND start_datex = '$start_date' AND start_time = '$start_time' AND end_time = '$end_time' AND characters = '$char_string' AND character_no = '$char_count';";
+
   //  use the kindercare db
   $conn->select_db('kindercare');
 
@@ -78,15 +81,14 @@ if (isset($_POST['add_assignment_btn'])) {
   if ($conn->query($sql_data) === TRUE) {
     // echo "New record created successfully";
 
-
     // create text file and add contents to it 
     require_once 'add_assignment_txt.php';
 
   } else {
-    $_SESSION['ass_success'] = "Assignment Added Successfully Added!";
+    $_SESSION['error'] = "Assignment Not Added!";
 
     // redirect to the add assignment screen
-    header("Location: add_assignment_screen.php");
+    // header("Location: add_assignment_screen.php");
     // echo "Error: " . $sql_data . "<br>" . $conn->error;
   }
 

@@ -1,7 +1,7 @@
 <?php
 
 // create file and folder
-require_once 'create_file.php';
+// require_once 'create_file.php';
 
 
 // Start the session

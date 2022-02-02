@@ -179,12 +179,12 @@ if (!file_exists("../../db/assignments.txt") ) {
 }
 
 
-// create a file assignmentscore.txt in the same directory
-if (!file_exists("../../db/assignmentscore.txt") ) {
-    $assignscore_file = fopen("../../db/assignmentscore.txt", "w");
+// create a file performance.txt in the same directory
+if (!file_exists("../../db/performance.txt") ) {
+    $assignscore_file = fopen("../../db/performance.txt", "w");
 
     fclose($assignscore_file);
     // echo "...";
 } else {
-    // echo "File assignmentscore.txt already exists <br>";
+    // echo "File performance.txt already exists <br>";
 }

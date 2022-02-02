@@ -14,6 +14,7 @@ struct ASSIGNMENTS
   char characters[100];
   int character_no;
   int time_difference;
+  int assignment_id;
 };
 
 void readFileAndAttemptAssignment()
@@ -75,6 +76,12 @@ void getAssignmentFromFileString(char *assingment)
       // convert token to int and assign it
       // to assignment.time_difference
       assignments.time_difference = atoi(token);
+
+      break;
+    case 3:
+      // convert token to int and assign it
+      // to assignment.assignment_id
+      assignments.assignment_id = atoi(token);
 
       break;
 
