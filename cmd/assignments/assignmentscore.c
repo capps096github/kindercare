@@ -2,7 +2,7 @@
 
 int main()
 {
-    char *filename = "C://xampp/htdocs/kindercare/db/assignments.txt";
+    char *filename = "C://xampp/htdocs/kindercare/db/assignmentscore.txt";
     FILE *fp = fopen(filename, "r");
 
     if (fp == NULL)
@@ -23,5 +23,3 @@ int main()
 
     return 0;
 }
-
-
