@@ -116,7 +116,6 @@ if ($conn->query($sql_db) === TRUE) {
     echo "Error creating table: " . $conn->error;
   }
 
-  // assignment score
   if ($conn->query($sql_assignmentscore) === TRUE) {
     // echo "Table assignmentscore created successfully";
   } else {
@@ -156,7 +155,7 @@ if (!file_exists("../../db")) {
     mkdir("../../db");
     // echo "Folder db created successfully <br>";
 } else {
-    echo "Folder db already exists";
+//    echo "Folder db already exists";
 }
 
 // create a file registered_pupils.txt in the same directory

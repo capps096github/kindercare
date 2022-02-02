@@ -8,7 +8,7 @@ require_once 'create_file.php';
 session_start();
 
 
-$filename = '../../db/assignments.txt';
+$filename = '../../../db/assignments.txt';
 
 if (isset($_POST['add_assignment_btn'])) {
 
