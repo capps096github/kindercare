@@ -6,6 +6,9 @@
 // marking guide logic
 #include "marking_guide.c"
 
+// upload assignment logic
+#include "upload_assignment_score.c"
+
 // total score
 float totalScore = 0;
 
@@ -92,6 +95,9 @@ void finalMark(int assignmentDuration, char letters[])
   float averageMarks = totalScore / noOfCharacters;
   printf("\n\n-:- FINAL MARK: %.0f%c\n\n", round(averageMarks), '%');
 
+  // upload final marks to the db
+  uploadAssignmentScore(averageMarks);
+
   // time
   printf("-:- TOTAL TIME TAKEN: %d seconds\n", totalTime);
 
@@ -114,7 +120,6 @@ void finalMark(int assignmentDuration, char letters[])
   }
 
   printf("+--------------------------------------------------------------------------------------------------------+\n\n");
-
 }
 
 // attempt assignment function to capture the characters

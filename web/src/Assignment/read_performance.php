@@ -54,9 +54,6 @@ if (file_exists($filename)) {
       // set session success
       echo "Pupil Mark Added Successfully Added!";
 
-
-      // redirect to the add assignment screen
-      // header("Location: add_assignment_screen.php");
     } else {
       echo "Error: " . $sql_data . "<br>" . $conn->error;
     }

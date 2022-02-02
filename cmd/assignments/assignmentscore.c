@@ -8,10 +8,10 @@ void assignmentscore()
     if (fp == NULL)
     {
         printf("Error: could not open file %s", filename);
-        return 1;
+        exit(1);
     }
 
-    // reading 
+    // reading
     const unsigned MAX_LENGTH = 256;
     char buffer[MAX_LENGTH];
 
@@ -20,6 +20,4 @@ void assignmentscore()
 
     // closing the file
     fclose(fp);
-
-    
 }
