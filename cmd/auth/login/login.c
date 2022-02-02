@@ -11,7 +11,7 @@ char lname[50];
 char userid[50];
 char password[50];
 };
-login()
+ void login()
 {
     char userid[200],password[40];
     FILE *log;
