@@ -22,7 +22,8 @@ void readFileAndAttemptAssignment()
   FILE *fptr;
   // File path
   // char *filename = "E:\\Cephas Laravel\\kindercare\\web\\db\\assignments.txt";
-  char *filename = "..\\web\\db\\assignments.txt";
+  // char *filename = "..\\web\\db\\assignments.txt";
+  char *filename = "..\\db\\assignments.txt";
 
   if ((fptr = fopen(filename, "r")) == NULL)
   {

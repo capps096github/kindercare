@@ -137,10 +137,55 @@ if ($conn->query($sql_db) === TRUE) {
     echo "Error creating table: " . $conn->error;
   }
 
-  // END
+
+
+
+    // END
 } else {
   echo "Error creating database: " . $conn->error;
 }
 
 // end
 $conn->close();
+
+
+//Creating text files needed by the app
+
+// create a folder db if it does not exist
+if (!file_exists("../../db")) {
+    mkdir("../../db");
+    // echo "Folder db created successfully <br>";
+} else {
+    echo "Folder db already exists";
+}
+
+// create a file registered_pupils.txt in the same directory
+if ( !file_exists("../../db/registered_pupils.txt")) {
+    $pupils_file = fopen("../../db/registered_pupils.txt", "w");
+
+    fclose($pupils_file);
+    // echo ".";
+} else {
+    // echo "File registered_pupils.txt already exists <br>";
+}
+
+// create a file assignments.txt in the same directory
+if (!file_exists("../../db/assignments.txt") ) {
+    $assign_file = fopen("../../db/assignments.txt", "w");
+
+    fclose($assign_file);
+    // echo "..";
+} else {
+    // echo "File assignments.txt already exists <br>";
+}
+
+
+// create a file assignmentscore.txt in the same directory
+if (!file_exists("../../db/assignmentscore.txt") ) {
+    $assignscore_file = fopen("../../db/assignmentscore.txt", "w");
+
+    fclose($assignscore_file);
+    // echo "...";
+} else {
+    // echo "File assignmentscore.txt already exists <br>";
+}
