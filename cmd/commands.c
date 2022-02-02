@@ -11,6 +11,9 @@
 #include "assignments/assignment.c"
 #include "assignments/assignmentscore.c"
 
+//checkstatus
+#include "checkstatus/checkstatus.c"
+
 // get command from the user function
 void klpCommands()
 {
@@ -73,10 +76,7 @@ void klpCommands()
     }
     else if (strcmp(command, checkstatus) == 0)
     {
-      printf("\n\n");
-      printf("AssignmentScores\n");
-      assignmentscore();
-      printf("\n\n");
+      checkStatus ();
     }
     else if (strcmp(command, attempt) == 0)
     {
