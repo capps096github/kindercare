@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// include a list of all files we need to include in the project
+
 // get the help file
 #include "help.c"
 

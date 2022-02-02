@@ -4,6 +4,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+// assignments
+#include "assignments/assignment.c"
+
 // get command from the user function
 void klpCommands()
 {
@@ -60,10 +63,8 @@ void klpCommands()
     }
     else if (strcmp(command, exit) == 0)
     {
-      printf("\n\n");
-      // exit the program
-      printf("Exiting the KLP...\n");
-      printf("\n\n");
+      printf("\n\nExiting the KLP...\n\n\n");
+      _Exit(0);
     }
     else if (strcmp(command, viewall) == 0)
     {
@@ -79,9 +80,8 @@ void klpCommands()
     }
     else if (strcmp(command, attemptassignment) == 0)
     {
-      printf("\n\n");
-      printf("attemptassignment\n");
-      printf("\n\n");
+      // read file and attempt assignment
+      readFileAndAttemptAssignment();
     }
     else if (strcmp(command, viewassignment) == 0)
     {
