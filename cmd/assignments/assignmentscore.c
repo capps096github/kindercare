@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main()
+void assignmentscore()
 {
     char *filename = "C://xampp/htdocs/kindercare/db/assignmentscore.txt";
     FILE *fp = fopen(filename, "r");
@@ -21,5 +21,5 @@ int main()
     // closing the file
     fclose(fp);
 
-    return 0;
+    
 }
