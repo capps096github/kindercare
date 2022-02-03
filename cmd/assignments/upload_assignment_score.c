@@ -91,7 +91,7 @@ void uploadAssignmentScore(int finalScore)
 
   // opening file in writing mode
   // fptr = fopen("..\\assignments\\performance.txt", "w");
-  fptr = fopen("assignments\\performance.txt", "w");
+  fptr = fopen("..\\assignments\\performance.txt", "w");
   authdb = fopen("..\\auth\\auth.txt", "r");
 
   // exiting program

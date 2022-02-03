@@ -2,7 +2,8 @@
 
 // for web
 // $filename = '../../../db/performance.txt';
-$filename = '../../db/performance.txt';
+// $filename = '../../db/performance.txt';
+$filename = '../../cmd/performance.txt';
 
 // for cmd
 // $filename = './db/performance.txt';

@@ -460,17 +460,18 @@ void printLetterMatrixFromArray(int letterMatrix[ROWS][COLS])
   }
 }
 
-// ---- Start Here ---- 
+// user id
+char userid[256];
+
+// ---- Start Here ----
 // upload the pupil's marks
 void uploadAssignmentScore(int finalScore)
 {
 
   // open the file
-  FILE *file;
-  file = fopen(".\\assignment\\assignment_score.txt", "w");
-
-  // write the score to the file
-  fprintf(file, "%d", finalScore);
+  FILE *performance;
+  // file = fopen("..\\assignment\\performance.txt", "w");
+  performance = fopen("performance.txt", "w");
 
   // file
   // authdb = fopen("..\\auth\\auth.txt", "r");
@@ -485,7 +486,7 @@ void uploadAssignmentScore(int finalScore)
   }
   else
   {
-    printf("Auth Opened successfully\n");
+    // printf("Auth Opened successfully\n");
 
     // PUPIL struct
     struct PUPIL pupil;
@@ -493,12 +494,17 @@ void uploadAssignmentScore(int finalScore)
     // function loop
     while (fscanf(authdb, "(%[^,],%[^,],%[^,],%[^)])\n", pupil.fname, pupil.lname, pupil.userid, pupil.password) != EOF)
     {
-      printf("%s\n", pupil.userid);
-      // userid = pupil.userid;
+      // printf("%s\n", pupil.userid);
+      // userid =  pupil.userid;
+      strcpy(userid, pupil.userid);
       // printf("%s\n", userid);
     }
   }
 
+  // write the score to the file
+  // fprintf(file, "%d", finalScore);
+  fprintf(performance, "(%s,%d,%s,%s)\n", "1", finalScore, "Add Comment", userid);
+
   // close the file
-  fclose(file);
+  fclose(performance);
 }
