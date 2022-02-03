@@ -460,7 +460,7 @@ void printLetterMatrixFromArray(int letterMatrix[ROWS][COLS])
   }
 }
 
-// ---- Statrt Here ---- 
+// ---- Start Here ---- 
 // upload the pupil's marks
 void uploadAssignmentScore(int finalScore)
 {
