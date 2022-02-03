@@ -18,7 +18,7 @@ int main()
 
     // welcome text
     printf("-:- WELCOME TO THE KLP - COMMAND LINE INTERFACE\n\n-:- HERE's SOME HELP FOR YOU :");
-
+ 
     // call the help function
     cmdHelp();
 
