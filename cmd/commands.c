@@ -14,6 +14,9 @@
 //checkstatus
 #include "checkstatus/checkstatus.c"
 
+//viewassignment
+#include "assignments/viewassignment.c"
+
 // get command from the user function
 void klpCommands()
 {
@@ -85,9 +88,7 @@ void klpCommands()
     }
     else if (strcmp(command, viewassignment) == 0)
     {
-      printf("\n\n");
-      printf("viewassignment\n");
-      printf("\n\n");
+      viewAssignment ();
     }
     else if (strcmp(command, checkdates) == 0)
     {
