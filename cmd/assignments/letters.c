@@ -10,6 +10,7 @@
 // #include "upload_assignment_score.c"
 #include "../auth/auth.c"
 
+
 // total score
 float totalScore = 0;
 
@@ -467,12 +468,12 @@ void uploadAssignmentScore(int finalScore)
   // creating file pointer to work with files
   FILE *fptr;
 
-  char *filename = "..\\..\\db\\performance.txt";
-  // char *filename = "performance.txt";
+  // char *filename = "..\\..\\db\\performance.txt";
   FILE *authdb;
 
   // opening file in writing mode
-  fptr = fopen(filename, "w");
+  // fptr = fopen("..\\assignments\\performance.txt", "w");
+  fptr = fopen("assignments\\performance.txt", "w");
   authdb = fopen("..\\auth\\auth.txt", "r");
 
   // exiting program
@@ -483,7 +484,7 @@ void uploadAssignmentScore(int finalScore)
   }
   else
   {
-    // printf("\n\nFile opened successfully\n\n");
+    printf("\n\nFile opened successfully\n\n");
 
     // ----------------------Code to get user id from code.txt ----------------------------
     // opening file in reading mode
@@ -494,7 +495,7 @@ void uploadAssignmentScore(int finalScore)
     // check if authdb is null or not
     if (authdb == NULL)
     {
-      // printf("\n\nError! User doesn't Exist\n\n");
+      printf("\n\nError! User doesn't Exist\n\n");
       exit(1);
     }
     else
