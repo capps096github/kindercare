@@ -7,7 +7,8 @@
 #include "marking_guide.c"
 
 // upload assignment logic
-#include "upload_assignment_score.c"
+// #include "upload_assignment_score.c"
+#include "../auth/auth.c"
 
 // total score
 float totalScore = 0;
@@ -30,6 +31,8 @@ int markingLogic(int matrix1[ROWS][COLS], int matrix2[ROWS][COLS], int row, int 
 float awardMarks(int matrix1[ROWS][COLS], int matrix2[ROWS][COLS]);
 void finalMark(int, char letters[]);
 
+void uploadAssignmentScore(int);
+
 void printLetterMatrixFromArray(int letterMatrix[ROWS][COLS]);
 
 // asignment intro
@@ -38,9 +41,9 @@ void assignmentIntro(char letters[], int length, int assignmentDuration)
   printf("\n\n---------------------------------------- THE KINDERCARE LEARNING PLATFORM (KLP) - COMMAND LINE INTERFACE ----------------------------------------\n\n");
 
   printf("ASSIGNMENT SUMMARY :-:-:-:-:-:-:-:-:- \n\n");
-  printf("-- Assignment Duration: %d\n", assignmentDuration);
-  printf("-- No. of Characters: %d\n", length);
-  printf("-- List of Characters: ");
+  printf("-:- Assignment Duration: %d\n", assignmentDuration);
+  printf("-:- No. of Characters: %d\n", length);
+  printf("-:- List of Characters: ");
 
   // assign length to noOfCharacters
   noOfCharacters = length;
@@ -49,13 +52,13 @@ void assignmentIntro(char letters[], int length, int assignmentDuration)
   for (int i = 0; i < length; i++)
   {
     // print the current character in the letters array
-    printf("%c, ", letters[i]);
+    printf("%c%c ", letters[i], (i == (length - 1)) ? ' ' : ',');
   }
   printf("\n\n");
 
-  printf("-:-:-:-:-:-:-:-: START ASSIGNMENT :-:-:-:-:-:-:-:-:-\n\n");
+  printf("-:-:-:- START ASSIGNMENT -:-:-:-:-\n\n");
 
-  printf("INSTRUCTIONS:\n");
+  printf("-:-:- INSTRUCTIONS:\n");
   printf("-:- Use 1's and 0's to mark the letters in the matrix.\n");
   printf("-:- Use 1's for *\n");
   printf("-:- Use 0's for <spaces>\n");
@@ -454,5 +457,71 @@ void printLetterMatrixFromArray(int letterMatrix[ROWS][COLS])
       }
     }
     printf("\n");
+  }
+}
+
+// function to upload assignment score to db
+void uploadAssignmentScore(int finalScore)
+{
+
+  // creating file pointer to work with files
+  FILE *fptr;
+
+  char *filename = "..\\..\\db\\performance.txt";
+  // char *filename = "performance.txt";
+  FILE *authdb;
+
+  // opening file in writing mode
+  fptr = fopen(filename, "w");
+  authdb = fopen("..\\auth\\auth.txt", "r");
+
+  // exiting program
+  if (fptr == NULL)
+  {
+    printf("\n\nError!\n\n");
+    exit(1);
+  }
+  else
+  {
+    // printf("\n\nFile opened successfully\n\n");
+
+    // ----------------------Code to get user id from code.txt ----------------------------
+    // opening file in reading mode
+
+    // declaring a char pointer
+    char *userid = "";
+
+    // check if authdb is null or not
+    if (authdb == NULL)
+    {
+      // printf("\n\nError! User doesn't Exist\n\n");
+      exit(1);
+    }
+    else
+    {
+      // printf("Auth Opened successfully\n");
+
+      // PUPIL struct
+      struct PUPIL pupil;
+
+      // function loop
+      while (fscanf(authdb, "(%[^,],%[^,],%[^,],%[^)])\n", pupil.fname, pupil.lname, pupil.userid, pupil.password) != EOF)
+      {
+        printf("%s\n", pupil.userid);
+        userid = pupil.userid;
+        printf("%s\n", userid);
+      }
+    }
+    // --------------------------------------------------
+
+    char result[1000];
+
+    // printf("User Code: %s\n", userid);
+    // add the score to the result string
+    sprintf(result, "(1,%d, 'Add Comment', '%s')", finalScore, userid);
+    printf("(1,%d, 'Add Comment', '%s')", finalScore, userid);
+
+    fprintf(fptr, "%s", result);
+    fclose(fptr);
   }
 }

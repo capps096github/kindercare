@@ -15,13 +15,13 @@ void cmdHelp()
   printf("+---------------------------------------------------------------------------------------+\n");
   printf("|                                   |                                                   |\n");
   printf("| login                             | login to the KLP                                  |\n");
-  printf("| register                          | register a new user                               |\n");
+  printf("| signup                            | signs up a new user                               |\n");
   printf("| logout                            | logout of the KLP                                 |\n");
   printf("| help                              | display this list of commands                     |\n");
   printf("| exit                              | exit the KLP                                      |\n");
   printf("| viewall                           | view all the assignments                          |\n");
   printf("| checkstatus                       | check the status of the assignments               |\n");
-  printf("| attemptassignment                 | attempt an assignment                             |\n");
+  printf("| attempt                           | attempt an assignment                             |\n");
   printf("| viewassignment <assignment_id>    | view an assignment                                |\n");
   printf("| checkdates <start_date> <end_date>| check the assignments                             |\n");
   printf("|                                   |                                                   |\n");

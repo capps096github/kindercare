@@ -26,15 +26,18 @@ void readFileAndAttemptAssignment()
   // char *filename = "..\\web\\db\\assignments.txt";
   char *filename = "..\\db\\assignments.txt";
 
-  if ((fptr = fopen(filename, "r")) == NULL)
+  // open file in reading mode
+  fptr = fopen(filename, "r");
+
+  if (fptr == NULL)
   {
-    printf("Error! opening file");
+    printf("Error! opening Assignment file");
 
     exit(1);
   }
   else
   {
-    printf("Assignment Opened successfully\n");
+    // printf("Assignment Opened successfully\n");
 
     // get the file contents and convert them to a string
     char *buffer = malloc(sizeof(char) * 100);

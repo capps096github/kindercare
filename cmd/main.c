@@ -14,10 +14,10 @@ int main()
 {
 
     printf("\n\n");
-    printf("+---------------------------------------- KINDERCARE LEARNING PLATFORM (KLP) - COMMAND LINE INTERFACE ----------------------------------------+\n\n\n");
+    printf("+------------------------- KINDERCARE LEARNING PLATFORM (KLP) - COMMAND LINE INTERFACE -------------------------+\n\n\n");
 
     // welcome text
-    printf("WELCOME TO THE KLP - COMMAND LINE INTERFACE\n\nHERE's SOME HELP FOR YOU :");
+    printf("-:- WELCOME TO THE KLP - COMMAND LINE INTERFACE\n\n-:- HERE's SOME HELP FOR YOU :");
 
     // call the help function
     cmdHelp();

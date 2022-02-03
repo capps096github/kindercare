@@ -4,6 +4,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+// auth
+// #include "auth/auth.c"
+
 // assignments
 #include "assignments/assignment.c"
 #include "assignments/assignmentscore.c"
@@ -14,13 +17,13 @@ void klpCommands()
 
   // initialize all commands as constant strings
   char login[] = "login";
-  char signup[] = "register";
+  char signup[] = "signup";
   char logout[] = "logout";
   char help[] = "help";
   char exit[] = "exit";
   char viewall[] = "viewall";
   char checkstatus[] = "checkstatus";
-  char attemptassignment[] = "attemptassignment";
+  char attempt[] = "attempt";
   char viewassignment[] = "viewassignment";
   char checkdates[] = "checkdates";
 
@@ -30,30 +33,25 @@ void klpCommands()
   // continue to get command from user until user enters "exit"
   do
   {
-    // capture a command from the user
-    printf("\n\n+-- Enter a command --+\n\n");
+
     // prompt the user to enter a command
-    printf("klp -> ");
+    printf("\n\n -:- (Enter a command) klp -> ");
     scanf("%s", &command);
+
+    // check auth.txt if its not empty the user command is executed else login
 
     // compare the command with the list of commands
     if (strcmp(command, login) == 0)
     {
-      printf("\n\n");
-      printf("login\n");
-      printf("\n\n");
+      klpLogin();
     }
     else if (strcmp(command, signup) == 0)
     {
-      printf("\n\n");
-      printf("register\n");
-      printf("\n\n");
+      klpSignup();
     }
     else if (strcmp(command, logout) == 0)
     {
-      printf("\n\n");
-      printf("logout\n");
-      printf("\n\n");
+      klpLogout();
     }
     else if (strcmp(command, help) == 0)
     {
@@ -80,7 +78,7 @@ void klpCommands()
       assignmentscore();
       printf("\n\n");
     }
-    else if (strcmp(command, attemptassignment) == 0)
+    else if (strcmp(command, attempt) == 0)
     {
       // read file and attempt assignment
       readFileAndAttemptAssignment();
