@@ -22,7 +22,7 @@ $sql_teachers = "CREATE TABLE IF NOT EXISTS kindercare.teachers (
 );";
 
 // put data in the teachers table
-$sql_teachers_data = "INSERT INTO kindercare.teachers (teacher_id, fname, lname, passwordx) VALUES
+$sql_teachers_data = "INSERT IGNORE INTO kindercare.teachers (teacher_id, fname, lname, passwordx) VALUES
 ('TR7823KLP', 'Cephas', 'Brian','cephas'),
 ('TR2075KLP', 'Chosen', 'Eddie','ce'),
 ('TR7803KLP', 'Simon', 'Desire','tr'),
@@ -41,7 +41,7 @@ $sql_pupils = "CREATE TABLE IF NOT EXISTS kindercare.pupils (
 );";
 
 // pupils data
-$sql_pupils_data = "INSERT INTO kindercare.pupils(user_code,fname,lname,phone_no,gender,teacher_id,passwordx) VALUES
+$sql_pupils_data = "INSERT IGNORE INTO kindercare.pupils(user_code,fname,lname,phone_no,gender,teacher_id,passwordx) VALUES
 ('7823KLP','John','Mugisa','+256780955031','M','TR7823KLP','JM'),
 ('2075KLP','Jane','Choosen','+256700444642','F','TR2075KLP','JC'),
 ('7853KLP','Mark','Desire','+256780958031','M','TR7893KLP','MD'),
@@ -73,7 +73,7 @@ $sql_assignments = "CREATE TABLE IF NOT EXISTS kindercare.assignments (
 
 
 // insert some assingments into the assignments table
-$sql_assignments_data = "INSERT INTO kindercare.assignments (characters, character_no, start_datex, start_time, end_time, teacher_id) VALUES
+$sql_assignments_data = "INSERT IGNORE INTO kindercare.assignments (characters, character_no, start_datex, start_time, end_time, teacher_id) VALUES
 ('ABCDG', 1, '2018-01-01', '09:00:00', '10:00:00', 'TR2345KLP'),
 ('SDRFT', 2, '2018-01-01', '09:00:00', '10:00:00', 'TR2345KLP'),
 ('CBNGH', 3, '2018-01-01', '09:00:00', '10:00:00', 'TR2345KLP'),
@@ -95,10 +95,10 @@ $sql_assignments_data = "INSERT INTO kindercare.assignments (characters, charact
 
 // assignment score
 $sql_assignmentscore = "CREATE TABLE IF NOT EXISTS kindercare.assignmentscore (
-  `assignment_id` VARCHAR(100) PRIMARY KEY,
+  `user_code` VARCHAR(30) PRIMARY KEY,
+  `assignment_id` VARCHAR(100),
   `score` INT(3) NOT NULL,
-  `comment` VARCHAR(100) NOT NULL,
-  `user_code` VARCHAR(30) NOT NULL
+  `comment` VARCHAR(100) NOT NULL
 );";
 
 // register pupils
@@ -111,7 +111,7 @@ $sql_registerpupils = "CREATE TABLE IF NOT EXISTS kindercare.registeredpupils (
 );";
 
 // register pupils
-$sql_registerpupils_data = "INSERT INTO kindercare.registeredpupils (user_code,fname,lname,phone_no,status) VALUES
+$sql_registerpupils_data = "INSERT IGNORE INTO kindercare.registeredpupils (user_code,fname,lname,phone_no,status) VALUES
 ('7823KLP','John','Mugisa','+256780955031','Activated'),
 ('2075KLP','Jane','Choosen','+256700444642','Activated'),
 ('7853KLP','Mark','Desire','+256780958031','Activated'),
@@ -185,7 +185,7 @@ if ($conn->query($sql_db) === TRUE) {
     echo "Error creating table: " . $conn->error;
   }
 
-  // insert data into the tables by running the data queries
+  // insert dummy data into the tables by running the data queries
   if ($conn->query($sql_teachers_data) === TRUE) {
     // echo "Table teachers created successfully";
   } else {
@@ -204,11 +204,6 @@ if ($conn->query($sql_db) === TRUE) {
     echo "Error creating table: " . $conn->error;
   }
 
-  if ($conn->query($sql_assignmentscore_data) === TRUE) {
-    // echo "Table assignmentscore created successfully";
-  } else {
-    echo "Error creating table: " . $conn->error;
-  }
 
   if ($conn->query($sql_registerpupils_data) === TRUE) {
     // echo "Table registeredpupils created successfully";

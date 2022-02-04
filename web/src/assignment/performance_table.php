@@ -1,7 +1,7 @@
 <?php
 
 // read the performance file
-require_once 'read_performance.php';
+require 'read_performance.php';
 
 // sql
 $servername = "localhost";

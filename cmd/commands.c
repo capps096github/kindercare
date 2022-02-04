@@ -32,6 +32,8 @@ void klpCommands()
   char attempt[] = "attempt";
   char viewassignment[] = "viewassignment";
   char checkdates[] = "checkdates";
+  char requestActivation[] = "requestActivation";
+
 
   // command from the user
   char command[100];
@@ -94,6 +96,12 @@ void klpCommands()
     {
       printf("\n\n");
       printf("checkdates\n");
+      printf("\n\n");
+    }
+    else if (strcmp(command, requestActivation) == 0)
+    {
+      printf("\n\n");
+      printf("requestActivation\n");
       printf("\n\n");
     }
     else

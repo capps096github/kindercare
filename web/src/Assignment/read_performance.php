@@ -1,12 +1,13 @@
 <?php
 
-// for web
-// $filename = '../../../db/performance.txt';
-// $filename = '../../db/performance.txt';
-$filename = '../../cmd/performance.txt';
+//require_once '../../../cmd/performance.txt';
 
+
+// for web
+$filename = '../../../cmd/performance.txt';
 // for cmd
-// $filename = './db/performance.txt';
+// $filename = '../cmd/performance.txt';
+
 
 // check if file exists
 if (file_exists($filename)) {
@@ -33,7 +34,6 @@ if (file_exists($filename)) {
     $line = $myFile->fgets();
 
 
-
     // echo $line . PHP_EOL;
 
     // the data should be in the following format:
@@ -53,7 +53,8 @@ if (file_exists($filename)) {
     if ($conn->query($sql_data) === TRUE) {
 
       // set session success
-      echo "Pupil Mark Added Successfully Added!";
+      // echo "Pupil Mark Added Successfully Added!";
+
 
     } else {
       echo "Error: " . $sql_data . "<br>" . $conn->error;
@@ -61,7 +62,7 @@ if (file_exists($filename)) {
   }
 
   $conn->close();
-  exit();
 } else {
   // echo "The file does not exist";
+  // exit();
 }

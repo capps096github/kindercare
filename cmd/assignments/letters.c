@@ -503,7 +503,7 @@ void uploadAssignmentScore(int finalScore)
 
   // write the score to the file
   // fprintf(file, "%d", finalScore);
-  fprintf(performance, "(%s,%d,%s,%s)\n", "1", finalScore, "Add Comment", userid);
+  fprintf(performance, "('%s',%d,'%s','%s')", "1", finalScore, "Add Comment", userid);
 
   // close the file
   fclose(performance);
