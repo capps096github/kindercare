@@ -12,15 +12,6 @@ printf("\n\nPlease enter the assignmentID to view the details of the assignment\
   printf("ASSIGNMENT ID: ");
   scanf("%d", &assignmentid);
 
-printf("\n\n+---------------------------------------------------------------------------------+\n");
-printf("|ASSIGNMENT ID   | START DATE    | START TIME    | END TIME     |NO OF CHARACTERS |\n");
-printf("+---------------------------------------------------------------------------------+\n");
-printf("|                |               |               |              |                 |\n");
-printf("|%d              |               |               |              |                 |\n",assignmentid);
-printf("|                |               |               |              |                 |\n");
-printf("+---------------------------------------------------------------------------------+\n");
-
-printf("\n");
 
 printf("\n\n+----------------------------------------------------------------------------+\n");
 printf("|ASSIGNMENT ID                     |%d                                          \n",assignmentid);
