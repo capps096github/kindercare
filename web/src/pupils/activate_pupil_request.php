@@ -28,6 +28,12 @@ if ($conn->select_db('kindercare') === TRUE) {
   // get the result
   $result = $conn->query($sql);
 
+  // now overrite the value of requests.txt to empty
+  $filename = '../../../cmd/requests.txt';
+  $handle = fopen($filename, 'w') or die('Cannot open file:  ' . $filename);
+  fclose($handle);
+
+
   // if the result is true print success else print error
   header("Location: dashboard.php");
 } else {

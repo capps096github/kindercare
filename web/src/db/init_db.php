@@ -107,27 +107,28 @@ $sql_registerpupils = "CREATE TABLE IF NOT EXISTS kindercare.registeredpupils (
   `fname` VARCHAR(100) NOT NULL,
   `lname` VARCHAR(100) NOT NULL,
   `phone_no` VARCHAR(30) NOT NULL,
-  `status` VARCHAR(30) NOT NULL DEFAULT 'Activated'
+  `status` VARCHAR(30) NOT NULL DEFAULT 'Activated',
+  `isrequest` VARCHAR(30) NOT NULL DEFAULT 'No'
 );";
 
 // register pupils
-$sql_registerpupils_data = "INSERT IGNORE INTO kindercare.registeredpupils (user_code,fname,lname,phone_no,status) VALUES
-('7823KLP','John','Mugisa','+256780955031','Activated'),
-('2075KLP','Jane','Choosen','+256700444642','Activated'),
-('7853KLP','Mark','Desire','+256780958031','Activated'),
-('2089KLP','Jane','Choosen','+256700744642','Activated'),
-('7824KLP','Simon','Mugisa','+256780955031','Activated'),
-('2275KLP','Jane','Martha','+256700444642','Activated'),
-('7843KLP','John','Mugisah','+256380958031','Activated'),
-('2099KLP','Ritah','Fibi','+256720744642','Activated'),
-('7833KLP','Peter','Mugisa','+256780955031','Activated'),
-('2675KLP','Jane','Choosen','+256700444642','Activated'),
-('7883KLP','Mark','Desire','+256780958031','Activated'),
-('2039KLP','Jane','Choosen','+256700744642','Activated'),
-('2823KLP','Simon','Mugisa','+256780955031','Activated'),
-('2275KLP','Jane','Martha','+256700444642','Activated'),
-('7873KLP','John','Mugisah','+256380958031','Activated'),
-('2019KLP','Ritah','Jane','+256720744642','Activated');";
+$sql_registerpupils_data = "INSERT IGNORE INTO kindercare.registeredpupils (user_code,fname,lname,phone_no,status, isrequest) VALUES
+('7823KLP','John','Mugisa','+256780955031','Activated','No'),
+('2075KLP','Jane','Choosen','+256700444642','Activated','No'),
+('7853KLP','Mark','Desire','+256780958031','Activated','No'),
+('2089KLP','Jane','Choosen','+256700744642','Activated','No'),
+('7824KLP','Simon','Mugisa','+256780955031','Activated','No'),
+('2275KLP','Jane','Martha','+256700444642','Activated','No'),
+('7843KLP','John','Mugisah','+256380958031','Activated','No'),
+('2099KLP','Ritah','Fibi','+256720744642','Activated','No'),
+('7833KLP','Peter','Mugisa','+256780955031','Activated','No'),
+('2675KLP','Jane','Choosen','+256700444642','Activated','No'),
+('7883KLP','Mark','Desire','+256780958031','Activated','No'),
+('2039KLP','Jane','Choosen','+256700744642','Activated','No'),
+('2823KLP','Simon','Mugisa','+256780955031','Activated','No'),
+('2275KLP','Jane','Martha','+256700444642','Activated','No'),
+('7873KLP','John','Mugisah','+256380958031','Activated','No'),
+('2019KLP','Ritah','Jane','+256720744642','Activated','No');";
 
 // register pupils
 $sql_requests = "CREATE TABLE IF NOT EXISTS kindercare.requests (

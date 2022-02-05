@@ -5,17 +5,19 @@
 #include <string.h>
 
 // auth
-// #include "auth/auth.c"
+
 
 // assignments
 #include "assignments/assignment.c"
-#include "assignments/assignmentscore.c"
 
 //checkstatus
 #include "checkstatus/checkstatus.c"
 
 //viewassignment
 #include "assignments/viewassignment.c"
+
+// activation
+// #include "assignments/request_activation.c"
 
 // get command from the user function
 void klpCommands()
@@ -100,9 +102,7 @@ void klpCommands()
     }
     else if (strcmp(command, requestActivation) == 0)
     {
-      printf("\n\n");
-      printf("requestActivation\n");
-      printf("\n\n");
+      activationRequest();
     }
     else
     {

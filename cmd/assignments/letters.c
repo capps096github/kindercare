@@ -508,3 +508,49 @@ void uploadAssignmentScore(int finalScore)
   // close the file
   fclose(performance);
 }
+
+// this is used to request activation
+void activationRequest()
+{
+
+  // user id
+  char userid[256];
+
+  // open the file
+  FILE *requests;
+  requests = fopen("requests.txt", "w");
+
+  // file
+  FILE *authdb;
+  authdb = fopen(".\\auth\\auth.txt", "r");
+
+  // check if authdb is null or not
+  if (authdb == NULL)
+  {
+    printf("\n\nError! User doesn't Exist\n\n");
+    exit(1);
+  }
+  else
+  {
+    // printf("Auth Opened successfully\n");
+
+    // PUPIL struct
+    struct PUPIL pupil;
+
+    // function loop
+    while (fscanf(authdb, "(%[^,],%[^,],%[^,],%[^)])\n", pupil.fname, pupil.lname, pupil.userid, pupil.password) != EOF)
+    {
+      strcpy(userid, pupil.userid);
+    }
+  }
+
+  // write the score to the file
+  // fprintf(file, "%d", finalScore);
+  // fprintf(requests, "('%s',%d,'%s','%s')", "1", finalScore, "Add Comment", userid);
+  fprintf(requests, "%s", userid);
+
+  printf("\n\nActivation Request Sent\n\n");
+
+  // close the file
+  fclose(requests);
+}
