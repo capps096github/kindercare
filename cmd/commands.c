@@ -49,6 +49,7 @@ void klpCommands()
     scanf("%s", &command);
 
     // check auth.txt if its not empty the user command is executed else login
+    
 
     // compare the command with the list of commands
     if (strcmp(command, login) == 0)
