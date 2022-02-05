@@ -16,20 +16,24 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
+
 // use the kindercare db
 if ($conn->select_db('kindercare') === TRUE) {
 
   // get all pupils in the assignmentscore table
-  $sql = "SELECT * FROM kindercare.assignmentscore";
+  $sql_assignmentscore = "SELECT * FROM kindercare.assignmentscore";
+
 
   // get the result
-  $result = $conn->query($sql);
+  $result = $conn->query($sql_assignmentscore);
 
   // row count
   $row_count = $result->num_rows;
 
   // if there are pupils print available else register them
   if ($row_count > 0) {
+
+    // echo "Success";
 
     //  table-top part of the table
     echo '
@@ -51,7 +55,7 @@ if ($conn->select_db('kindercare') === TRUE) {
                         Last Name
                       </th>
                       <th scope="col" class="px-6 py-3 text-center text-xs font-bold text-white uppercase tracking-wider">
-                        Assignment 1 (%)
+                        Assignment MARK (%)
                       </th>
                       <th scope="col" class="px-6 py-3  text-xs font-medium text-white text-center uppercase
                           tracking-wider">
@@ -94,6 +98,7 @@ if ($conn->select_db('kindercare') === TRUE) {
       // get the pupil from the registered pupils' table where the user_code matches
       $sql_pupil = "SELECT * FROM kindercare.registeredpupils WHERE user_code = '$db_usercode'";
 
+
       // get the result
       $result_pupil = $conn->query($sql_pupil);
 
@@ -129,7 +134,8 @@ if ($conn->select_db('kindercare') === TRUE) {
                       </td>';
 
       // if comment = Keep It Up or comment = Excellent
-      if ($db_comment == "Keep It Up" || $db_comment == "Excellent" || $db_comment == "Very Good" || $db_comment == "Good") {
+      if ($db_comment == "Keep It Up" || $db_comment == "Excellent" || $db_comment == "Very Good" || $db_comment == "Good"
+      ) {
         echo '<td class="px-6 py-4 justify-center items-center text-center whitespace-nowrap">
                         <span class="px-2 inline-flex text-xs leading-5 font-bold rounded-full bg-green/10 text-green">
                         ' . $db_comment . '
@@ -163,7 +169,6 @@ if ($conn->select_db('kindercare') === TRUE) {
       // close row
       echo '</tr></form>';
     }
-
 
     // bottom part of the table
     echo '</tbody>

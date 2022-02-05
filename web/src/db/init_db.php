@@ -21,14 +21,6 @@ $sql_teachers = "CREATE TABLE IF NOT EXISTS kindercare.teachers (
   `passwordx` VARCHAR(30) NOT NULL
 );";
 
-// put data in the teachers table
-$sql_teachers_data = "INSERT IGNORE INTO kindercare.teachers (teacher_id, fname, lname, passwordx) VALUES
-('TR7823KLP', 'Cephas', 'Brian','cephas'),
-('TR2075KLP', 'Chosen', 'Eddie','ce'),
-('TR7803KLP', 'Simon', 'Desire','tr'),
-('TR2015KLP', 'Ankunda', 'Andante','tr')
-;";
-
 // pupils table
 $sql_pupils = "CREATE TABLE IF NOT EXISTS kindercare.pupils (
   `user_code` VARCHAR(30) PRIMARY KEY,
@@ -40,6 +32,7 @@ $sql_pupils = "CREATE TABLE IF NOT EXISTS kindercare.pupils (
   `passwordx` VARCHAR(30) NOT NULL
 );";
 
+<<<<<<< Updated upstream
 // pupils data
 $sql_pupils_data = "INSERT IGNORE INTO kindercare.pupils(user_code,fname,lname,phone_no,gender,teacher_id,passwordx) VALUES
 ('7823KLP','John','Mugisa','+256780955031','M','TR7823KLP','JM'),
@@ -59,6 +52,8 @@ $sql_pupils_data = "INSERT IGNORE INTO kindercare.pupils(user_code,fname,lname,p
 ('7873KLP','John','Mugisa','+256380958031','M','TR7893KLP','JM'),
 ('2019KLP','Ritah','Jane','+256720744642','F','TR2045KLP','RJ');";
 
+=======
+>>>>>>> Stashed changes
 
 // assignments table
 $sql_assignments = "CREATE TABLE IF NOT EXISTS kindercare.assignments (
@@ -72,27 +67,6 @@ $sql_assignments = "CREATE TABLE IF NOT EXISTS kindercare.assignments (
 );";
 
 
-// insert some assingments into the assignments table
-$sql_assignments_data = "INSERT IGNORE INTO kindercare.assignments (characters, character_no, start_datex, start_time, end_time, teacher_id) VALUES
-('ABCDG', 1, '2018-01-01', '09:00:00', '10:00:00', 'TR2345KLP'),
-('SDRFT', 2, '2018-01-01', '09:00:00', '10:00:00', 'TR2345KLP'),
-('CBNGH', 3, '2018-01-01', '09:00:00', '10:00:00', 'TR2345KLP'),
-('JKLMO', 4, '2018-01-01', '09:00:00', '10:00:00', 'TR2345KLP'),
-('QWERTY', 5, '2018-01-01', '09:00:00', '10:00:00', 'TR2345KLP'),
-('ZXCVBN', 6, '2018-01-01', '09:00:00', '10:00:00', 'TR2345KLP'),
-('ASDFGH', 7, '2018-01-01', '09:00:00', '10:00:00', 'TR2345KLP'),
-('TYUIO', 8, '2018-01-01', '09:00:00', '10:00:00', 'TR2345KLP'),
-('QWERTY', 10, '2018-01-01', '09:00:00', '10:00:00', 'TR2345KLP'),
-('ZXCVBN', 11, '2018-01-01', '09:00:00', '10:00:00', 'TR2345KLP'),
-('ASDFGH', 12, '2018-01-01', '09:00:00', '10:00:00', 'TR2345KLP'),
-('TYUIO', 13, '2018-01-01', '09:00:00', '10:00:00', 'TR2345KLP'),
-('QWERTY', 14, '2018-01-01', '09:00:00', '10:00:00', 'TR2345KLP'),
-('ZXCVBN', 15, '2018-01-01', '09:00:00', '10:00:00', 'TR2345KLP'),
-('ASDFGH', 16, '2018-01-01', '09:00:00', '10:00:00', 'TR2345KLP'),
-('TYUIO', 17, '2018-01-01', '09:00:00', '10:00:00', 'TR2345KLP')
-;";
-
-
 // assignment score
 $sql_assignmentscore = "CREATE TABLE IF NOT EXISTS kindercare.assignmentscore (
   `user_code` VARCHAR(30) PRIMARY KEY,
@@ -100,6 +74,8 @@ $sql_assignmentscore = "CREATE TABLE IF NOT EXISTS kindercare.assignmentscore (
   `score` INT(3) NOT NULL,
   `comment` VARCHAR(100) NOT NULL
 );";
+
+
 
 // register pupils
 $sql_registerpupils = "CREATE TABLE IF NOT EXISTS kindercare.registeredpupils (
@@ -111,32 +87,7 @@ $sql_registerpupils = "CREATE TABLE IF NOT EXISTS kindercare.registeredpupils (
   `isrequest` VARCHAR(30) NOT NULL DEFAULT 'No'
 );";
 
-// register pupils
-$sql_registerpupils_data = "INSERT IGNORE INTO kindercare.registeredpupils (user_code,fname,lname,phone_no,status, isrequest) VALUES
-('7823KLP','John','Mugisa','+256780955031','Activated','No'),
-('2075KLP','Jane','Choosen','+256700444642','Activated','No'),
-('7853KLP','Mark','Desire','+256780958031','Activated','No'),
-('2089KLP','Jane','Choosen','+256700744642','Activated','No'),
-('7824KLP','Simon','Mugisa','+256780955031','Activated','No'),
-('2275KLP','Jane','Martha','+256700444642','Activated','No'),
-('7843KLP','John','Mugisah','+256380958031','Activated','No'),
-('2099KLP','Ritah','Fibi','+256720744642','Activated','No'),
-('7833KLP','Peter','Mugisa','+256780955031','Activated','No'),
-('2675KLP','Jane','Choosen','+256700444642','Activated','No'),
-('7883KLP','Mark','Desire','+256780958031','Activated','No'),
-('2039KLP','Jane','Choosen','+256700744642','Activated','No'),
-('2823KLP','Simon','Mugisa','+256780955031','Activated','No'),
-('2275KLP','Jane','Martha','+256700444642','Activated','No'),
-('7873KLP','John','Mugisah','+256380958031','Activated','No'),
-('2019KLP','Ritah','Jane','+256720744642','Activated','No');";
 
-// register pupils
-$sql_requests = "CREATE TABLE IF NOT EXISTS kindercare.requests (
-  `user_code` VARCHAR(30) PRIMARY KEY,
-  `fname` VARCHAR(100) NOT NULL,
-  `lname` VARCHAR(100) NOT NULL,
-  `phone_no` VARCHAR(30) NOT NULL
-);";
 
 
 
@@ -179,38 +130,6 @@ if ($conn->query($sql_db) === TRUE) {
     echo "Error creating table: " . $conn->error;
   }
 
-  // requests
-  if ($conn->query($sql_requests) === TRUE) {
-    // echo "Table requests created successfully";
-  } else {
-    echo "Error creating table: " . $conn->error;
-  }
-
-  // insert dummy data into the tables by running the data queries
-  if ($conn->query($sql_teachers_data) === TRUE) {
-    // echo "Table teachers created successfully";
-  } else {
-    echo "Error creating table: " . $conn->error;
-  }
-
-  if ($conn->query($sql_pupils_data) === TRUE) {
-    // echo "Table pupils created successfully";
-  } else {
-    echo "Error creating table: " . $conn->error;
-  }
-
-  if ($conn->query($sql_assignments_data) === TRUE) {
-    // echo "Table assignments created successfully";
-  } else {
-    echo "Error creating table: " . $conn->error;
-  }
-
-
-  if ($conn->query($sql_registerpupils_data) === TRUE) {
-    // echo "Table registeredpupils created successfully";
-  } else {
-    echo "Error creating table: " . $conn->error;
-  }
 
 
   // END
@@ -232,15 +151,6 @@ if (!file_exists("../../db")) {
   //    echo "Folder db already exists";
 }
 
-// create a file registered_pupils.txt in the same directory
-if (!file_exists("../../db/registered_pupils.txt")) {
-  $pupils_file = fopen("../../db/registered_pupils.txt", "w");
-
-  fclose($pupils_file);
-  // echo ".";
-} else {
-  // echo "File registered_pupils.txt already exists <br>";
-}
 
 // create a file assignments.txt in the same directory
 if (!file_exists("../../db/assignments.txt")) {
@@ -250,15 +160,4 @@ if (!file_exists("../../db/assignments.txt")) {
   // echo "..";
 } else {
   // echo "File assignments.txt already exists <br>";
-}
-
-
-// create a file performance.txt in the same directory
-if (!file_exists("../../db/performance.txt")) {
-  $assignscore_file = fopen("../../db/performance.txt", "w");
-
-  fclose($assignscore_file);
-  // echo "...";
-} else {
-  // echo "File performance.txt already exists <br>";
 }

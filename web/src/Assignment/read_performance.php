@@ -34,7 +34,7 @@ if (file_exists($filename)) {
     $line = $myFile->fgets();
 
 
-    // echo $line . PHP_EOL;
+    // echo "gggh: " .$line . PHP_EOL;
 
     // the data should be in the following format:
     // (assignment_id, score, comment, user_code)

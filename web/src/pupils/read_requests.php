@@ -32,8 +32,9 @@ if (file_exists($filename)) {
 
     // check if usercode is not empty
     if (!empty($usercode)) {
-      // get the pupil from the registered pupils table and update the isrequest = "Yes"
-      $sql = "UPDATE kindercare.registeredpupils  SET `isrequest` = 'Yes'  WHERE registeredpupils.user_code = '$usercode';";
+      // get the pupil from the registered pupils table and update the isrequest = "Yes" where activationstatus is not Activated
+      $sql = "UPDATE `registeredpupils` SET `isrequest` = 'Yes'  WHERE registeredpupils.user_code = '$usercode' AND registeredpupils.status != 'Activated';";
+      // $sql = "UPDATE kindercare.registeredpupils  SET `isrequest` = 'Yes'  WHERE registeredpupils.user_code = '$usercode';";
 
       //  select the kindercare db
       $conn->select_db('kindercare');
