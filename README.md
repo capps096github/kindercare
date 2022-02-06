@@ -10,13 +10,14 @@ Pupils use it to draw simple characters on a screen and teachers use it to teach
 
 ## The Members of the Group:
 
-- ANKUNDA ANDANTE RUTAINAMA
+<!-- table with Name, Student No and Registration Number -->
 
-- TWAHIRWA EDWARD
-
-- MUGISA BRIAN
-
-- NIWAHEREZA SIMON DESIRE
+| **Name**                  | **Student No** | **Registration No** |
+| ------------------------- | -------------- | ------------------- |
+| MUGISA BRIAN              | 2000707823     | 20/U/7823/PS        |
+| ANKUNDA ANDANTE RUTAINAMA | 2000702015     | 20/U/2015/EVE       |
+| NIWAHEREZA SIMON DESIRE   | 2000707803     | 20/U/7803/PS        |
+| TWAHIRWA EDWARD           | 2000702075     | 20/U/2075/EVE       |
 
 ## Project Structure (Folders)
 
@@ -75,6 +76,10 @@ This contains the Web Interface of the Kindercare Learning Platform (KLP) with c
 - ### **/cmd**
 
   This contains the Command-line Interface of the Kindercare Learning Platform (KLP) with code written in `C`
+
+##### <u>CMD Command Help</u>
+
+![CMD Command Help](cmd/screenshots/cmd.png)
 
 - ### **/db**
 
