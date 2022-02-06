@@ -82,8 +82,10 @@ void klpLogin()
   // check if authdb is null or not
   if (authdb == NULL)
   {
-    printf("\n\nError! opening file\n\n");
-    exit(1);
+    printf("\n\nError! Auth Database not found!\n\n +--- Create an Account Instead ---+\n\n");
+
+    klpSignup();
+    // exit(1);
   }
   else
   {
@@ -121,3 +123,33 @@ void klpLogout()
   exit(1);
 }
 
+// a function to check if the auth.txt file is empty or not
+int isEmpty()
+{
+  // opening file in reading mode
+  FILE *authdb;
+  authdb = fopen("auth\\auth.txt", "r");
+
+  // check if authdb is null or not
+  if (authdb == NULL)
+  {
+    // printf("\n\nError! opening file\n\n");
+    // exit(1);
+
+    printf("\n\nError! Auth Database not found!\n\n +--- Create an Account Instead ---+\n\n");
+
+    klpSignup();
+  }
+  else
+  {
+    // PUPIL struct
+    struct PUPIL pupil;
+
+    // function loop
+    while (fscanf(authdb, "(%[^,],%[^,],%[^,],%[^)])\n", pupil.fname, pupil.lname, pupil.userid, pupil.password) != EOF)
+    {
+      return 0;
+    }
+  }
+  return 1;
+}
