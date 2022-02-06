@@ -77,7 +77,7 @@ if ($conn->select_db('kindercare') === TRUE) {
     $conn->query($sql_pupils) === TRUE &&
     $conn->query($sql_assignments) === TRUE &&
     $conn->query($sql_assignmentscore) === TRUE &&
-    $conn->query($sql_registerpupils) === TRUE 
+    $conn->query($sql_registerpupils) === TRUE
   ) {
     $_SESSION['settings_success'] = "Database Cleared Successfully!";
 
@@ -92,6 +92,16 @@ if ($conn->select_db('kindercare') === TRUE) {
     $conn->close();
   }
 
+  // for web
+  $filename = '../../../cmd/performance.txt';
+
+  //  delete the file
+  if (file_exists($filename)) {
+    unlink($filename);
+  }
+
+  // clear the contents of the file
+  // file_put_contents($filename, '');
 
   // redirect to settings page
   header("Location: ../settings/settings.php");

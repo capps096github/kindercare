@@ -9,8 +9,6 @@
 // get the commands file
 #include "commands.c"
 
-
-
 // Starting point of the Kindercare Learning Platform (KLP) CMD-INTERFACE
 int main()
 {

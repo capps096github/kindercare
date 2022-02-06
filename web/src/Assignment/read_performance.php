@@ -36,12 +36,7 @@ if (file_exists($filename)) {
 
     // echo "gggh: " .$line . PHP_EOL;
 
-    // the data should be in the following format:
-    // (assignment_id, score, comment, user_code)
-    // ('assignment_id', 'score', 'comment', 'user_code')
-    // (1, 'score', 'comment', 'user_code')
-
-    // sql command to insert data into the db
+   // sql command to insert data into the db
     $sql_data = "INSERT IGNORE INTO 
         kindercare.assignmentscore (assignment_id, score, comment, user_code)
          VALUES   " .  $line . ";";
