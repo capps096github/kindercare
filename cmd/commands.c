@@ -4,13 +4,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-// auth
-
-<<<<<<< HEAD
 //viewall
 #include "viewall/viewall.c"
-=======
->>>>>>> 0214281824bf0a7b8da327e6d635d74040086f3c
+
 // assignments
 #include "assignments/assignment.c"
 
@@ -61,54 +57,6 @@ void klpCommands()
       // call the signup function
       klpSignup();
     }
-<<<<<<< HEAD
-    else if (strcmp(command, logout) == 0)
-    {
-      klpLogout();
-    }
-    else if (strcmp(command, help) == 0)
-    {
-      printf("\n\n");
-      // call the help function again
-      cmdHelp();
-      printf("\n\n");
-    }
-    else if (strcmp(command, exit) == 0)
-    {
-      printf("\n\nExiting the KLP...\n\n\n");
-      _Exit(0);
-    }
-    else if (strcmp(command, viewall) == 0)
-    {
-      printf("\n\n");
-     viewallassignments();
-      printf("\n\n");
-    }
-    else if (strcmp(command, checkstatus) == 0)
-    {
-      checkStatus ();
-    }
-    else if (strcmp(command, attempt) == 0)
-    {
-      // read file and attempt assignment
-      readFileAndAttemptAssignment();
-    }
-    else if (strcmp(command, viewassignment) == 0)
-    {
-      viewAssignment ();
-    }
-    else if (strcmp(command, checkdates) == 0)
-    {
-      printf("\n\n");
-      printf("checkdates\n");
-      printf("\n\n");
-    }
-    else if (strcmp(command, requestActivation) == 0)
-    {
-      activationRequest();
-    }
-=======
->>>>>>> 0214281824bf0a7b8da327e6d635d74040086f3c
     else
     {
       // printf("Auth Opened successfully\n");
@@ -141,7 +89,7 @@ void klpCommands()
       else if (strcmp(command, viewall) == 0)
       {
         printf("\n\n");
-        printf("viewall\n");
+        viewallassignments();
         printf("\n\n");
       }
       else if (strcmp(command, checkstatus) == 0)

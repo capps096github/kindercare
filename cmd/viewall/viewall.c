@@ -2,7 +2,7 @@
 
 void viewallassignments()
 {
-    char *filename = "C://xampp/htdocs/kindercare/db/assignments.txt";
+    char *filename = "..\\db\\assignments.txt";
     FILE *fp = fopen(filename, "r");
 
     if (fp == NULL)
