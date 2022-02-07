@@ -123,7 +123,8 @@ if ($conn->select_db('kindercare') === TRUE) {
 </td>
 <td class="px-6  py-4 text-green whitespace-nowrap text-sm ">
     <div class="justify-center flex items-center">
-        <a class="mx-auto justify-center w-full text-center py-2 px-4 border border-transparent text-sm  rounded-md text-red  bg-red/20 hover:bg-red hover:text-white transition-colors duration-300"
+        <a class="mx-auto justify-center w-full text-center py-2 px-4 border border-transparent text-sm  rounded-md hover:text-red
+                            hover:bg-red/20 bg-red text-white transition-colors duration-300"
            href="deactivate_pupil.php?' . $user_code . ' ">
             Deactivate
         </a>
@@ -138,7 +139,7 @@ if ($conn->select_db('kindercare') === TRUE) {
 </td>
 <td class="px-6 py-4 text-green whitespace-nowrap text-sm ">
     <div class="justify-center flex items-center">
-        <a class="mx-auto justify-center text-center w-full py-2 px-4 border border-transparent text-sm rounded-md text-green  bg-green/20 hover:bg-green hover:text-white transition-colors duration-300"
+        <a class="mx-auto justify-center text-center w-full py-2 px-4 border border-transparent text-sm rounded-md hover:text-green bg-green hover:bg-green/20 text-white transition-colors duration-300"
            href="activate_pupil.php?' . $user_code . '">
             Activate
         </a>

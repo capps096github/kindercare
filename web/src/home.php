@@ -66,7 +66,7 @@ if (!isset($_SESSION["teacher_id"])) {
       <!-- Actions -->
       <div class="space-x-4 flex justify-center items-center mt-4 md:mt-0">
         <!-- Log out -->
-        <a href="./auth/logout.php" class="text-white font-bold bg-darkred  hover:text-red hover:bg-white rounded-md  px-5 py-3 text-sm bg-transparent
+        <a href="./auth/logout.php" class="text-white font-bold bg-red  hover:text-red hover:bg-white rounded-md  px-5 py-3 text-sm bg-transparent
             transition-all duration-300">
           <i class="fas fa-sign-in-alt"></i>
           <span>LOGOUT</span>

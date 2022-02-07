@@ -29,7 +29,7 @@ if (isset($_POST['add_assignment_btn'])) {
 
   // if the characters are more than 8, tell the user to choose less than 8 characters else create a string from the array
   if ($char_count > 8) {
-    echo "Please choose less than 8 characters";
+    // echo "Please choose less than 8 characters";
     // set session error
     $_SESSION['error'] = "Please choose less than 8 characters";
 
