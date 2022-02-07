@@ -63,9 +63,9 @@ if (!isset($_SESSION["teacher_id"])) {
           echo "<h2 class='text-3xl tracking-tight mt-1 font-extrabold sm:text-3xl md:text-4xl mx-auto text-white hover:text-amber' >" . $_SESSION['ass_success'] . "</h2>";
           echo "<p class='mt-2 font-bold text-white hover:text-amber'>Feel free to add another assignment </p>";
           unset($_SESSION['ass_success']);
-        } else if (isset($_SESSION['error'])) {
-          echo "<h2 class='text-3xl tracking-tight mt-1 font-extrabold sm:text-3xl md:text-4xl mx-auto text-red hover:text-white' >" . $_SESSION['error'] . "</h2>";
-          unset($_SESSION['error']);
+        } else if (isset($_SESSION['ass_error'])) {
+          echo "<h2 class='text-3xl tracking-tight mt-1 font-extrabold sm:text-3xl md:text-4xl mx-auto text-red hover:text-white' >" . $_SESSION['ass_error'] . "</h2>";
+          unset($_SESSION['ass_error']);
         }
 
         echo '<h2 class="text-3xl tracking-tight mt-4 font-extrabold sm:text-3xl md:text-4xl mx-auto">

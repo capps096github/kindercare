@@ -37,9 +37,9 @@ if (isset($_POST['add_assignment_btn'])) {
 
   // if the characters are more than 8, tell the user to choose less than 8 characters else create a string from the array
   if ($char_count > 8) {
-    echo "Please choose less than 8 characters";
+    // echo "Please choose less than 8 characters";
     // set session error
-    $_SESSION['error'] = "Please choose less than 8 characters";
+    $_SESSION['ass_error'] = "Please choose not more than 8 characters";
 
     // go to assignment page
     header("Location: add_assignment_screen.php");
@@ -83,7 +83,6 @@ if (isset($_POST['add_assignment_btn'])) {
 
     // create text file and add contents to it 
     require_once 'add_assignment_txt.php';
-
   } else {
     $_SESSION['error'] = "Assignment Not Added!";
 
