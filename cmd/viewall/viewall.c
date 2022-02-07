@@ -2,7 +2,7 @@
 
 void viewallassignments()
 {
-    char *filename = "..\\db\\assignments.txt";
+    char *filename = "../db/assignments.txt";
     FILE *fp = fopen(filename, "r");
 
     if (fp == NULL)
