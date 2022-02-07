@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-//viewall
+// viewall
 #include "viewall/viewall.c"
 
 // assignments
@@ -52,7 +52,7 @@ void klpCommands()
     if (isEmpty() == 1)
     {
       // print
-      printf("\n\nError! Create an Account to Execute Command\n\n");
+      printf("\n\nError! Create an Account to Execute Command\n\n +--- Create an Account Instead ---+\n\n");
 
       // call the signup function
       klpSignup();

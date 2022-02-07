@@ -102,17 +102,23 @@ if ($conn->select_db('kindercare') === TRUE) {
       // get the result
       $result_pupil = $conn->query($sql_pupil);
 
-      // get the student details from the result
-      foreach ($result_pupil as $row_pupil) {
-        // get the first name
-        $db_firstname = $row_pupil['fname'];
-        // get the last name
-        $db_lastname = $row_pupil['lname'];
-      }
+      // row count
+      $row_count_pupil = $result_pupil->num_rows;
+
+      // if the pupil exists print the data else do nothing
+      if ($row_count_pupil > 0) {
+
+        // get the student details from the result
+        foreach ($result_pupil as $row_pupil) {
+          // get the first name
+          $db_firstname = $row_pupil['fname'];
+          // get the last name
+          $db_lastname = $row_pupil['lname'];
+        }
 
 
-      // table rows
-      echo '<form action="add_comment.php?' . $user_code_and_assignment_id . '" method="post">
+        // table rows
+        echo '<form action="add_comment.php?' . $user_code_and_assignment_id . '" method="post">
        <tr>
                       <td class="px-6 py-4">
                         <p class="text-sm font-bold text-left text-blue">
@@ -133,25 +139,26 @@ if ($conn->select_db('kindercare') === TRUE) {
                         ' . $db_score . '
                       </td>';
 
-      // if comment = Keep It Up or comment = Excellent
-      if ($db_comment == "Keep It Up" || $db_comment == "Excellent" || $db_comment == "Very Good" || $db_comment == "Good"
-      ) {
-        echo '<td class="px-6 py-4 justify-center items-center text-center whitespace-nowrap">
+        // if comment = Keep It Up or comment = Excellent
+        if (
+          $db_comment == "Keep It Up" || $db_comment == "Excellent" || $db_comment == "Very Good" || $db_comment == "Good"
+        ) {
+          echo '<td class="px-6 py-4 justify-center items-center text-center whitespace-nowrap">
                         <span class="px-2 inline-flex text-xs leading-5 font-bold rounded-full bg-green/10 text-green">
                         ' . $db_comment . '
                         </span>
                       </td>';
-      } else {
-        echo '<td class="px-6 py-4 justify-center items-center text-center whitespace-nowrap">
+        } else {
+          echo '<td class="px-6 py-4 justify-center items-center text-center whitespace-nowrap">
                         <span class="px-2 inline-flex text-xs leading-5 font-bold rounded-full bg-red/10 text-red">
                         ' . $db_comment . '
                         </span>
                       </td>';
-      }
+        }
 
 
-      //drop of comments from excellent to poor
-      echo '<td class="px-6 py-4 whitespace-nowrap text-center text-white font-bold text-sm ">
+        //drop of comments from excellent to poor
+        echo '<td class="px-6 py-4 whitespace-nowrap text-center text-white font-bold text-sm ">
                         <select class="bg-blue border border-blue rounded-md shadow-sm  focus:border-blue transition duration-150 ease-in-out sm:text-sm sm:leading-5" id="comment" name="comment"
                           onchange="this.form.submit()">
                           <option value="' . $db_comment . '
@@ -166,10 +173,13 @@ if ($conn->select_db('kindercare') === TRUE) {
                         </select>
                       </td>';
 
-      // close row
-      echo '</tr></form>';
+        // close row
+        echo '</tr></form>';
+     
+     
+      
+      }
     }
-
     // bottom part of the table
     echo '</tbody>
 </table>

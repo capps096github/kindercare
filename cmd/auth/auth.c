@@ -136,9 +136,9 @@ int isEmpty()
     // printf("\n\nError! opening file\n\n");
     // exit(1);
 
-    printf("\n\nError! Auth Database not found!\n\n +--- Create an Account Instead ---+\n\n");
+    printf("\n\nError! Auth Database not found!\n\n");
 
-    klpSignup();
+    // klpSignup();
   }
   else
   {
