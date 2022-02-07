@@ -39,10 +39,15 @@ if (isset($_POST['register_btn'])) {
     // echo "New record created successfully";
 
     // create text file and add contents to it 
-    require_once 'add_pupil.php';
+    // require_once 'add_pupil.php';
 
+    // echo "Success, wrote ($pupil_string) to file ($filename)";
+    $_SESSION['success'] = "Pupil Successfully registered";
+
+    // redirect to the register screen
+    header("Location: register_pupil.php");
   } else {
-    echo "Error: " . $sql_data . "<br>" . $conn->error;
+    $_SESSION['success'] = "Error: " . $sql_data . "<br>" . $conn->error;
   }
 
 

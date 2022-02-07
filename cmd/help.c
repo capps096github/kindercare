@@ -19,12 +19,12 @@ void cmdHelp()
   printf("| logout                            | logout of the KLP                                             |\n");
   printf("| help                              | display this list of commands                                 |\n");
   printf("| exit                              | exit the KLP                                                  |\n");
-  printf("| viewall                           | displays assignment no and date, showing if attempted or not  |\n");
   printf("| checkstatus                       | check the status of the assignments                           |\n");
   printf("| attempt                           | attempt an assignment                                         |\n");
+  printf("| requestActivation                 | used to request a teacher to activate him or her              |\n");
+  printf("| viewall                           | displays assignment no and date, showing if attempted or not  |\n");
   printf("| viewassignment <assignment_id>    | details of a specified assignment                             |\n");
   printf("| checkdates <start_date> <end_date>| check if there is an assignment within a specific time range  |\n");
-  printf("| requestActivation                 | used to request a teacher to activate him or her              |\n");
   printf("|                                   |                                                               |\n");
   printf("+---------------------------------------------------------------------------------------------------+\n");
 
