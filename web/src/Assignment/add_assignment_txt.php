@@ -31,7 +31,7 @@ if (isset($_POST['add_assignment_btn'])) {
   if ($char_count > 8) {
     echo "Please choose less than 8 characters";
     // set session error
-    $_SESSION['error'] = "Please choose less than 8 characters";
+    $_SESSION['error'] = "Please choose not more than 8 characters";
 
     // go to assignment page
     header("Location: add_assignment_screen.php");
