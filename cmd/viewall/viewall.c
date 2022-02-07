@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void viewallassignments()
 {
@@ -8,10 +9,10 @@ void viewallassignments()
     if (fp == NULL)
     {
         printf("Error: could not open file %s", filename);
-        return 1;
+        exit(1);
     }
 
-    // reading 
+    // reading
     const unsigned MAX_LENGTH = 256;
     char buffer[MAX_LENGTH];
 
@@ -20,8 +21,4 @@ void viewallassignments()
 
     // closing the file
     fclose(fp);
-
-   
 }
-
-
