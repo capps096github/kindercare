@@ -1,8 +1,5 @@
 <?php
 
-// create file and folder
-// require_once 'create_file.php';
-
 
 // Start the session
 session_start();
@@ -64,10 +61,14 @@ if (isset($_POST['add_assignment_btn'])) {
     exit();
   }
 
+  // get the assignment id from the session
+  $assignment_id = $_SESSION['ass_id'];
 
+  // create a string from all the above variables (assignment_id, characters, character_no, time_difference)
+  $assignment_string = $assignment_id . "-" . $char_string . "-" . $char_count . "-" . $time_difference;
 
-  // create a string from all the above variables (characters, character_no, time_difference)
-  $assignment_string =  $char_string . "-" . $char_count . "-" . $time_difference;
+  // print the string
+  // echo $assignment_string;
 
 
   // Let's make sure the file exists and is writable first.
@@ -95,6 +96,9 @@ if (isset($_POST['add_assignment_btn'])) {
 
     $_SESSION['ass_success'] = "Assignment Added Successfully Added!";
 
+
+    // unset the assignment id from the session
+    unset($_SESSION['ass_id']);
 
     // redirect to the add assignment screen
     header("Location: add_assignment_screen.php");

@@ -1,3 +1,9 @@
+<?php
+// Start the session
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,9 +37,20 @@
         <h2 class="text-3xl tracking-tight mt-1 font-extrabold sm:text-3xl md:text-4xl mx-auto">
           Welcome Back to the KinderCare Learning Platform (KLP)
         </h2>
+
         <p class="text-xs mt-6 text-amber hover:text-white tracking-tight font-extrabold">
           Login to continue.
         </p>
+
+
+        <?php
+        // check if success session is set then echo it out in a h2 tag 
+        if (isset($_SESSION['login_error'])) {
+          echo "<h2 class='text-3xl tracking-tight mt-1 font-extrabold sm:text-3xl md:text-4xl mx-auto text-red hover:text-white' >" . $_SESSION['login_error'] . "</h2>";
+          unset($_SESSION['login_error']);
+        }
+
+        ?>
 
 
       </div>
@@ -96,10 +113,10 @@
       </div>
     </main>
 
-      <!-- Footer -->
-      <?php require_once '../footer.php'; ?>
+    <!-- Footer -->
+    <?php require_once '../footer.php'; ?>
 
- 
+
   </section>
 </body>
 

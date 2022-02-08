@@ -20,8 +20,8 @@ int noOfCharacters = 0;
 int totalTime = 0;
 
 // function declarations
-void attemptAssignment(char letters[], int, int);
-void assignmentIntro(char letters[], int, int);
+void attemptAssignment(char letters[], int, int,int);
+void assignmentIntro(char letters[], int, int,int);
 
 void captureLetterMatrix(char);
 void letterHint(char);
@@ -36,11 +36,12 @@ void uploadAssignmentScore(int);
 void printLetterMatrixFromArray(int letterMatrix[ROWS][COLS]);
 
 // asignment intro
-void assignmentIntro(char letters[], int length, int assignmentDuration)
+void assignmentIntro(char letters[], int length, int assignmentDuration, int assignment_id)
 {
   printf("\n\n---------------------------------------- THE KINDERCARE LEARNING PLATFORM (KLP) - COMMAND LINE INTERFACE ----------------------------------------\n\n");
 
-  printf("ASSIGNMENT SUMMARY :-:-:-:-:-:-:-:-:- \n\n");
+  printf("ASSIGNMENT %d SUMMARY :-:-:-:-:-:-:-:-:- \n\n", assignment_id);
+  printf("-:- ASSIGNMENT ID: %d\n",assignment_id);
   printf("-:- Assignment Duration: %d\n", assignmentDuration);
   printf("-:- No. of Characters: %d\n", length);
   printf("-:- List of Characters: ");
@@ -67,11 +68,11 @@ void assignmentIntro(char letters[], int length, int assignmentDuration)
 }
 // the attempt assignment function takes in a character array and loops through each character in the array while calling the captureLetterMatrix
 // function for each character in the array
-void attemptAssignment(char letters[], int length, int assignmentDuration)
+void attemptAssignment(char letters[], int length, int assignmentDuration, int assignment_id)
 {
 
   // intro
-  assignmentIntro(letters, length, assignmentDuration);
+  assignmentIntro(letters, length, assignmentDuration, assignment_id);
 
   // incase we are calling the function, the length is the character_no stored in the db
   for (int i = 0; i < length; i++)

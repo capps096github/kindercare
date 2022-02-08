@@ -8,9 +8,10 @@ void readFileAndAttemptAssignment();
 void getAssignmentFromFileString(char *assingment);
 
 // create an assignments struct with the following fields:
-//  characters, character_no, time_difference
+//  assignment_id, characters, character_no, time_difference
 struct ASSIGNMENTS
 {
+  int assignment_id;
   char characters[100];
   int character_no;
   int time_difference;
@@ -67,12 +68,18 @@ void getAssignmentFromFileString(char *assingment)
     switch (i)
     {
     case 1:
+
+      // characters
+      strcpy(assignments.characters, token);
+
+      break;
+    case 2:
       // convert token to int and assign it
       // to character_no
       assignments.character_no = atoi(token);
 
       break;
-    case 2:
+    case 3:
       // convert token to int and assign it
       // to assignment.time_difference
       assignments.time_difference = atoi(token);
@@ -80,9 +87,9 @@ void getAssignmentFromFileString(char *assingment)
       break;
 
     default:
-
-      // characters
-      strcpy(assignments.characters, token);
+      // convert token to int and assign it
+      // to assignment.assignment_id
+      assignments.assignment_id = atoi(token);
 
       break;
     }
@@ -92,10 +99,13 @@ void getAssignmentFromFileString(char *assingment)
   }
 
   // print the assignments struct
+  printf("\n\n");
+  // assignmenst.assignment_id
+  // printf("-:- ASSIGNMENT ID: %d\n", assignments.assignment_id);
   // printf("characters: %s\n", assignments.characters);
   // printf("character_no: %d\n", assignments.character_no);
   // printf("time_difference: %d\n", assignments.time_difference);
 
   // start assignment attempt
-  attemptAssignment(assignments.characters, assignments.character_no, assignments.time_difference);
+  attemptAssignment(assignments.characters, assignments.character_no, assignments.time_difference, assignments.assignment_id);
 }

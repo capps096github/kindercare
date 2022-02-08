@@ -81,7 +81,25 @@ if (isset($_POST['add_assignment_btn'])) {
   if ($conn->query($sql_data) === TRUE) {
     // echo "New record created successfully";
 
-    // create text file and add contents to it 
+    // read the assignment id from the db
+    $result = $conn->query($sql_read_id);
+
+    // if the result is not empty
+    if ($result->num_rows > 0) {
+      // output data of each row
+      while ($row = $result->fetch_assoc()) {
+        // echo "assignment_id: " . $row["assignment_id"] . "<br>";
+
+        // assign the id to a variable
+        $ass_id = $row["assignment_id"];
+
+        // put this in a session
+        $_SESSION['ass_id'] = $ass_id;
+      }
+    } else {
+      echo "0 results";
+    }
+
     require_once 'add_assignment_txt.php';
   } else {
     $_SESSION['error'] = "Assignment Not Added!";

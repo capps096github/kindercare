@@ -45,7 +45,9 @@ if (isset($_POST['login_btn'])) {
         $db_password = $row["passwordx"];
       }
     } else {
-      echo "Create an account first";
+      // echo "Create an account first";
+      // set session error login_error
+      $_SESSION['login_error'] = "Create an account first";
 
       // redirect to the Teacher's create account page
       header("Location: ../teacher/register.php");
@@ -64,7 +66,9 @@ if (isset($_POST['login_btn'])) {
       // go Home Screen
       header("Location: ../home.php");
     } else {
-      echo "Login Failed";
+      // set the session error login_error
+      $_SESSION['login_error'] = "Login Failed! Incorrect Teacher ID or Password";
+      // echo "Login Failed";
 
       // go to Teachers Login
       header("Location: ../teacher/login.php");
@@ -74,7 +78,6 @@ if (isset($_POST['login_btn'])) {
     exit();
   } else {
     echo "Database not found";
-
 
     // redirect to the register page
     header("Location: ../register/register.php");
