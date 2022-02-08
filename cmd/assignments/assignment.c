@@ -10,6 +10,7 @@ void getAssignmentFromFileString(char *assingment);
 // view assignment functions
 void viewAssignment();
 void getAssignmentDetails(char *assingment);
+void checkAssignmentStatus(int);
 
 // create an assignments struct with the following fields:
 //  assignment_id, characters, character_no, time_difference
@@ -19,6 +20,15 @@ struct ASSIGNMENTS
   char characters[100];
   int character_no;
   int time_difference;
+};
+
+// performance struct for the assignment
+struct PERFORMANCE
+{
+  int assignment_id;
+  int marks;
+  char comment[100];
+  char pupil_id[100];
 };
 
 void readFileAndAttemptAssignment()
@@ -205,13 +215,10 @@ void getAssignmentDetails(char *assingment)
   printf("+---------------------------+--------------------------+\n");
   printf("| -:- CHARACTERS:           |   %s\n", assignments.characters);
   printf("+---------------------------+--------------------------+\n");
-
   printf("| -:- NUMBER OF CHARACTERS: |   %d\n", assignments.character_no);
   printf("+---------------------------+--------------------------+\n");
-
   printf("| -:- ASSIGNMENT DURATION:  |   %d\n", assignments.time_difference);
   printf("+---------------------------+--------------------------+\n");
-
   printf("| -:- ATTEMPT STATUS:       |   %d\n", assignments.time_difference);
   printf("+---------------------------+--------------------------+\n\n");
 }
@@ -219,8 +226,55 @@ void getAssignmentDetails(char *assingment)
 // check if the user has attempted the assignment
 void checkAssignmentStatus(int assignment_id)
 {
+  printf("\n\n+-----------------------yoyoo-------------------------------+\n");
 
   // open the file in read mode
   FILE *performance;
   performance = fopen("performance.txt", "r");
+
+  // check if performance is null or not
+  if (performance == NULL)
+  {
+    printf("\n\nNo Assignment Attempted Yet\n\n");
+    // exit(1);
+    // return 0;
+  }
+  else
+  {
+    // printf("Performance Opened successfully\n");
+    // ('1', 47, 'Add Comment', '2346KLP')
+
+    // PERFORMANCE struct
+    struct PERFORMANCE recentPerformance;
+
+    // recent assignment id
+    int recentAssignmentId = 0;
+
+    // function loop
+    while (fscanf(performance, "(%[^,],%[^,],%[^,],%[^)])", recentPerformance.assignment_id, recentPerformance.marks, recentPerformance.comment, recentPerformance.pupil_id) != EOF)
+    {
+      printf("\n\n We are here");
+      // convert recent assignment id to int
+      // recentAssignmentId = atoi(recentPerformance.assignment_id);
+      recentAssignmentId = recentPerformance.assignment_id;
+      printf("%d\n", recentAssignmentId);
+    }
+
+    // print assignment id
+    printf("%d\n", recentAssignmentId);
+
+    // check if the recent assignment id is equal to the assignment id
+    // if (recentAssignmentId == assignment_id)
+    // {
+    //   printf("\n\nAssignment Attempted\n\n");
+    //   // exit(1);
+    //   // return 1;
+    // }
+    // else
+    // {
+    //   printf("\n\nNo Assignment Attempted Yet\n\n");
+    //   // exit(1);
+    //   // return 0;
+    // }
+  }
 }

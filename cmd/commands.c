@@ -4,8 +4,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
-
 // assignments
 #include "assignments/assignment.c"
 
@@ -87,7 +85,8 @@ void klpCommands()
       }
       else if (strcmp(command, viewall) == 0)
       {
-        viewAssignmentInfo();
+        // viewAssignmentInfo();
+        checkAssignmentStatus(48);
       }
       else if (strcmp(command, checkstatus) == 0)
       {
