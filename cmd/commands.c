@@ -85,8 +85,7 @@ void klpCommands()
       }
       else if (strcmp(command, viewall) == 0)
       {
-        // viewAssignmentInfo();
-        checkAssignmentStatus(48);
+        viewAssignmentInfo();
       }
       else if (strcmp(command, checkstatus) == 0)
       {

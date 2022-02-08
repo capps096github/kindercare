@@ -468,10 +468,14 @@ char userid[256];
 // upload the pupil's marks
 void uploadAssignmentScore(int finalScore, int assignment_id)
 {
+  // Attempted File
+  FILE *fp;
+
+  // Open the file in append mode
+  fp = fopen("attempted.txt", "w");
 
   // open the file
   FILE *performance;
-  // file = fopen("..\\assignment\\performance.txt", "w");
   performance = fopen("performance.txt", "w");
 
   // file
@@ -503,8 +507,13 @@ void uploadAssignmentScore(int finalScore, int assignment_id)
   // write the score to the file
   fprintf(performance, "(%d,%d,'%s','%s')", assignment_id, finalScore, "Add Comment", userid);
 
+  // write to the attempted file
+  fprintf(fp, "(%d)", assignment_id);
+
   // close the file
   fclose(performance);
+
+  fclose(fp);
 }
 
 // this is used to request activation
