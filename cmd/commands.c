@@ -4,8 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// viewall
-#include "viewall/viewall.c"
+
 
 // assignments
 #include "assignments/assignment.c"
@@ -88,9 +87,7 @@ void klpCommands()
       }
       else if (strcmp(command, viewall) == 0)
       {
-        printf("\n\n");
-        viewallassignments();
-        printf("\n\n");
+        viewAssignmentInfo();
       }
       else if (strcmp(command, checkstatus) == 0)
       {

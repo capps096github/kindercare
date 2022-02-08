@@ -20,8 +20,8 @@ int noOfCharacters = 0;
 int totalTime = 0;
 
 // function declarations
-void attemptAssignment(char letters[], int, int,int);
-void assignmentIntro(char letters[], int, int,int);
+void attemptAssignment(char letters[], int, int, int);
+void assignmentIntro(char letters[], int, int, int);
 
 void captureLetterMatrix(char);
 void letterHint(char);
@@ -29,9 +29,9 @@ void letterHint(char);
 void awardCapturedLetter(char letter, int capturedMatrix[ROWS][COLS]);
 int markingLogic(int matrix1[ROWS][COLS], int matrix2[ROWS][COLS], int row, int col);
 float awardMarks(int matrix1[ROWS][COLS], int matrix2[ROWS][COLS]);
-void finalMark(int, char letters[]);
+void finalMark(int, char letters[], int);
 
-void uploadAssignmentScore(int);
+void uploadAssignmentScore(int, int);
 
 void printLetterMatrixFromArray(int letterMatrix[ROWS][COLS]);
 
@@ -41,7 +41,7 @@ void assignmentIntro(char letters[], int length, int assignmentDuration, int ass
   printf("\n\n---------------------------------------- THE KINDERCARE LEARNING PLATFORM (KLP) - COMMAND LINE INTERFACE ----------------------------------------\n\n");
 
   printf("ASSIGNMENT %d SUMMARY :-:-:-:-:-:-:-:-:- \n\n", assignment_id);
-  printf("-:- ASSIGNMENT ID: %d\n",assignment_id);
+  printf("-:- ASSIGNMENT ID: %d\n", assignment_id);
   printf("-:- Assignment Duration: %d\n", assignmentDuration);
   printf("-:- No. of Characters: %d\n", length);
   printf("-:- List of Characters: ");
@@ -82,10 +82,10 @@ void attemptAssignment(char letters[], int length, int assignmentDuration, int a
   }
 
   // get the final marks
-  finalMark(assignmentDuration, letters);
+  finalMark(assignmentDuration, letters, assignment_id);
 }
 
-void finalMark(int assignmentDuration, char letters[])
+void finalMark(int assignmentDuration, char letters[], int assignment_id)
 {
 
   // print results
@@ -100,7 +100,7 @@ void finalMark(int assignmentDuration, char letters[])
   printf("\n\n-:- FINAL MARK: %.0f%c\n\n", round(averageMarks), '%');
 
   // upload final marks to the db
-  uploadAssignmentScore(averageMarks);
+  uploadAssignmentScore(averageMarks, assignment_id);
 
   // time
   printf("-:- TOTAL TIME TAKEN: %d seconds\n", totalTime);
@@ -466,7 +466,7 @@ char userid[256];
 
 // ---- Start Here ----
 // upload the pupil's marks
-void uploadAssignmentScore(int finalScore)
+void uploadAssignmentScore(int finalScore, int assignment_id)
 {
 
   // open the file
@@ -495,16 +495,13 @@ void uploadAssignmentScore(int finalScore)
     // function loop
     while (fscanf(authdb, "(%[^,],%[^,],%[^,],%[^)])\n", pupil.fname, pupil.lname, pupil.userid, pupil.password) != EOF)
     {
-      // printf("%s\n", pupil.userid);
-      // userid =  pupil.userid;
       strcpy(userid, pupil.userid);
       // printf("%s\n", userid);
     }
   }
 
   // write the score to the file
-  // fprintf(file, "%d", finalScore);
-  fprintf(performance, "('%s',%d,'%s','%s')", "1", finalScore, "Add Comment", userid);
+  fprintf(performance, "(%d,%d,'%s','%s')", assignment_id, finalScore, "Add Comment", userid);
 
   // close the file
   fclose(performance);
