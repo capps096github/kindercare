@@ -78,6 +78,7 @@ if (isset($_POST['login_btn'])) {
       header("Location: ../teacher/login.php");
     }
 
+    //closes a previously opened connection
     $conn->close();
     exit();
   } else {
