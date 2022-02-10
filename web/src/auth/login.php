@@ -1,9 +1,9 @@
 <?php
 // ---------------------- Login PHP -------------------- //
-// Start the session
+// Start the session, the function sets the session
 session_start();
 
-
+//checks for if you have clicked the login button 
 if (isset($_POST['login_btn'])) {
 
   // sql
@@ -36,9 +36,12 @@ if (isset($_POST['login_btn'])) {
     $result = $conn->query($sql_select);
 
     // check if the teacher exists
+    //fetch_assoc() fetches a result row as an associative array(an array with keys and values)
     if ($result->num_rows > 0) {
       // output data of each row first name, last name, teacher id, password
+
       while ($row = $result->fetch_assoc()) {
+        //row is the associative array, to access the data, use the column name of the teacher's table as the key of the array
         $db_first_name = $row["fname"];
         $db_last_name = $row["lname"];
         $db_teacher_id = $row["teacher_id"];
@@ -47,10 +50,11 @@ if (isset($_POST['login_btn'])) {
     } else {
       // echo "Create an account first";
       // set session error login_error
-      $_SESSION['login_error'] = "Create an account first";
+      $_SESSION['login_error'] = "Create an account first!";
 
       // redirect to the Teacher's create account page
-      header("Location: ../teacher/register.php");
+      //exit in this position not to execute the code below
+      header("Location: ../teacher/login.php");exit();
     }
 
     // check if the teacher_id and password matches

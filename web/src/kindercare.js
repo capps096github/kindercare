@@ -20,9 +20,10 @@ function goToAssignmentsDashboard() {
   location.href = "./assignment/assignments.php";
 }
 
-// THis toggles to show the password
+// THis toggles to show or hide the password
 function togglePassword() {
   const passwordField = document.getElementById("password");
+  //if its password change it to text and vice versa
   if (passwordField.type === "password") {
     passwordField.type = "text";
   } else {
