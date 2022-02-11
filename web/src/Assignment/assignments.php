@@ -16,7 +16,7 @@ if (!isset($_SESSION["teacher_id"])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Title -->
-  <title>KLP | Register Pupil</title>
+  <title>KLP | Assignments</title>
   <!-- CSS -->
   <link href="../../css/kindercare.css" rel="stylesheet" />
 
