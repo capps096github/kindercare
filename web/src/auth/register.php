@@ -3,11 +3,7 @@
 // Start the session
 session_start();
 
-<<<<<<< Updated upstream
 //account is only created if you have clicked on the button
-=======
-
->>>>>>> Stashed changes
 if (isset($_POST['create_btn'])) {
 
   // check if the terms' checkbox is checked
@@ -29,11 +25,7 @@ if (isset($_POST['create_btn'])) {
     }
 
     // prevent SQL injection while getting the data from the form
-<<<<<<< Updated upstream
     //real_escape_string prevents the user from writing the SQL commands in thr form, they will be captured as strings instead of commands
-=======
-    
->>>>>>> Stashed changes
     $teacher_id = $conn->real_escape_string($_POST['teacher_id']);
     $first_name = $conn->real_escape_string($_POST['first_name']);
     $last_name = $conn->real_escape_string($_POST['last_name']);
