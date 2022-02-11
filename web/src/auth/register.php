@@ -54,7 +54,10 @@ if (isset($_POST['create_btn'])) {
     $conn->close();
     exit();
   } else {
-    echo "Please agree to the terms and conditions";
+    // echo "Please agree to the terms and conditions";
+
+    // set the register_error session
+    $_SESSION['register_error'] = "Please agree to the terms and conditions";
 
     // refresh the register page
     header("Location: ../teacher/register.php");

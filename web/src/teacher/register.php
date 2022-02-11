@@ -1,3 +1,8 @@
+<?php
+// Start the session
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +40,20 @@
           If you are new here, create an account to continue.
         </p>
 
+
+
+
+
       </div>
+
+      <?php
+      // check if success session is set then echo it out in a h2 tag 
+      if (isset($_SESSION['register_error'])) {
+        echo "<h2 class='text-3xl tracking-tight mt-1 font-extrabold sm:text-3xl md:text-4xl mx-auto text-red hover:text-white' >" . $_SESSION['register_error'] . "</h2>";
+        unset($_SESSION['register_error']);
+      }
+
+      ?>
 
       <!-- form div -->
       <div class="mt-10 justify-center items-center">
@@ -115,8 +133,8 @@
       </div>
     </main>
 
-      <!-- Footer -->
-      <?php require_once '../footer.php'; ?>
+    <!-- Footer -->
+    <?php require_once '../footer.php'; ?>
   </section>
 </body>
 
