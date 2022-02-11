@@ -94,7 +94,7 @@ if (isset($_POST['add_assignment_btn'])) {
       exit();
     }
 
-    $_SESSION['ass_success'] = "Assignment Added Successfully Added!";
+    $_SESSION['ass_success'] = "Assignment Added Successfully !";
 
 
     // unset the assignment id from the session
