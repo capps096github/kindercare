@@ -1,3 +1,4 @@
+<!-- checks if the teacher is log in -->
 <?php
 session_start();
 if (!isset($_SESSION["teacher_id"])) {
@@ -59,10 +60,11 @@ if (!isset($_SESSION["teacher_id"])) {
       <div class="sm:text-center text-center items-center transition-colors duration-500 text-amber hover:text-white">
 
         <?php
-        // check if success session is set then echo it out in a h2 tag 
+        // check if success session is set then echo it out in a h2 tag, the unset puts the session back to default 
         if (isset($_SESSION['success'])) {
           echo "<h2 class='text-3xl tracking-tight mt-1 font-extrabold sm:text-3xl md:text-4xl mx-auto text-white hover:text-amber' >" . $_SESSION['success'] . "</h2>";
           echo "<p class='mt-2 font-bold text-white hover:text-amber'>Feel free to register another pupil </p>";
+          
           unset($_SESSION['success']);
         }
 

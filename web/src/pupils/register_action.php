@@ -7,7 +7,7 @@ if (isset($_POST['register_btn'])) {
 
 
 
-  // sql
+  // db variables to pass on connection
   $servername = "localhost";
   $username = "root";
   $password = "";
@@ -26,7 +26,7 @@ if (isset($_POST['register_btn'])) {
   $phone_no = $conn->real_escape_string($_POST['phone_no']);
 
 
-  // sql command
+  // sql command to insert the rigistered pp
   $sql_data = "INSERT IGNORE INTO
        kindercare.registeredpupils (	user_code,	fname,	lname,	phone_no	)
         VALUES ('$user_code', '$first_name', '$last_name', '$phone_no');";
@@ -34,7 +34,7 @@ if (isset($_POST['register_btn'])) {
   //  use the kindercare db
   $conn->select_db('kindercare');
 
-  // insert data query
+  // insert data query running the querry above
   if ($conn->query($sql_data) === TRUE) {
     // echo "New record created successfully";
 

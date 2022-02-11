@@ -122,7 +122,7 @@ if (!isset($_SESSION["teacher_id"])) {
       <!-- A grid of 2 cards -->
       <div class="mt-10 md:grid-cols-2 lg:grid-cols-2 grid-cols-1 gap-2 sm:max-w-6xl max-w-6xl mx-auto grid">
 
-        <!-- pupil -->
+        <!-- pupil's card -->
         <article onclick="goToPupilsDashboard()" class="hover:cursor-pointer bg-amber rounded-lg p-10 transition-colors duration-300 text-blue
             hover:text-white hover:bg-blue justify-center items-center">
 
