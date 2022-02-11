@@ -10,7 +10,7 @@ if (isset($_POST['create_btn'])) {
   if (isset($_POST['terms'])) {
 
     // sql
-    //variables for the db
+    //variables for the db that will be passed to connection
     //root works on most pcs
     $servername = "localhost";
     $username = "root";
@@ -59,7 +59,7 @@ if (isset($_POST['create_btn'])) {
       $_SESSION['register_error'] = "Error: " . $sql_data . "<br>" . $conn->error;
     }
 
-//closes the connection to the db
+    //closes the connection to the db
     $conn->close();
 
     //exits this php script
