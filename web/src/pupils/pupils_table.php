@@ -131,12 +131,14 @@ if ($conn->select_db('kindercare') === TRUE) {
     </div>
 </td>';
       } else {
-        // print the activate btn and status
+        // print the activate btn and status and  prints the activation button or deactivation
         echo '<td class="px-6 py-4 justify-center items-center text-center whitespace-nowrap">
                         <span class="px-2 inline-flex text-xs leading-5  rounded-full bg-red/10 text-red">
                           Deactivated
                         </span>
+                        
 </td>
+
 <td class="px-6 py-4 text-green whitespace-nowrap text-sm ">
     <div class="justify-center flex items-center">
         <a class="mx-auto justify-center text-center w-full py-2 px-4 border border-transparent text-sm rounded-md hover:text-green bg-green hover:bg-green/20 text-white transition-colors duration-300"
