@@ -54,7 +54,7 @@ if (isset($_POST['add_assignment_btn'])) {
   if ($time_difference < 0 || strtotime($end_time) < strtotime($start_time)) {
     echo "Please choose a valid time";
     // set session error
-    $_SESSION['error'] = "Please choose a valid time";
+    $_SESSION['ass_error'] = "Please choose a valid time";
 
     // go to assignment page
     header("Location: add_assignment_screen.php");
@@ -105,7 +105,7 @@ if (isset($_POST['add_assignment_btn'])) {
 
     fclose($fp);
   } else {
-    $_SESSION['error'] = "The file $filename is not writable";
+    $_SESSION['ass_error'] = "The file $filename is not writable";
 
     // go to assignment page
     header("Location: add_assignment_screen.php");

@@ -58,6 +58,20 @@ if (isset($_POST['add_assignment_btn'])) {
   // get teacher_id from the session
   $teacher_id = $_SESSION['teacher_id'];
 
+  // get the time_difference= the end time - start time
+  $time_difference = strtotime($end_time) - strtotime($start_time);
+
+  // check if the time difference is less than 0 and also check if the end time is less than the start time and if it is, tell the user to choose a valid time
+  if ($time_difference < 0 || strtotime($end_time) < strtotime($start_time)) {
+    echo "Please choose a valid time";
+    // set session error
+    $_SESSION['ass_error'] = "Please choose a valid time, the end time must be greater than the start time";
+
+    // go to assignment page
+    header("Location: add_assignment_screen.php");
+    exit();
+  }
+
   //  print all the captured data
   // echo "teacher_id: " . $teacher_id . "<br>";
   // echo "start_date: " . $start_date . "<br>";
@@ -102,10 +116,10 @@ if (isset($_POST['add_assignment_btn'])) {
 
     require_once 'add_assignment_txt.php';
   } else {
-    $_SESSION['error'] = "Assignment Not Added!";
+    $_SESSION['ass_error'] = "Assignment Not Added!";
 
     // redirect to the add assignment screen
-    // header("Location: add_assignment_screen.php");
+    header("Location: add_assignment_screen.php");
     // echo "Error: " . $sql_data . "<br>" . $conn->error;
   }
 
