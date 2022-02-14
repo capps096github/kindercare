@@ -10,9 +10,6 @@
 // checkstatus
 #include "checkstatus/checkstatus.c"
 
-// viewassignment
-#include "assignments/viewassignment.c"
-
 // activation
 // #include "assignments/request_activation.c"
 
@@ -30,7 +27,6 @@ void klpCommands()
   char checkstatus[] = "checkstatus";
   char attempt[] = "attempt";
   char viewassignment[] = "viewassignment";
-  char checkdates[] = "checkdates";
   char requestActivation[] = "requestActivation";
 
   // command from the user
@@ -96,16 +92,7 @@ void klpCommands()
         // read file and attempt assignment
         readFileAndAttemptAssignment();
       }
-      else if (strcmp(command, viewassignment) == 0)
-      {
-        viewAssignment();
-      }
-      else if (strcmp(command, checkdates) == 0)
-      {
-        printf("\n\n");
-        printf("checkdates\n");
-        printf("\n\n");
-      }
+
       else if (strcmp(command, requestActivation) == 0)
       {
         activationRequest();

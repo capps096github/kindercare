@@ -23,8 +23,6 @@ void cmdHelp()
   printf("| attempt                           | attempt an assignment                                         |\n");
   printf("| requestActivation                 | used to request a teacher to activate him or her              |\n");
   printf("| viewall                           | displays assignment no and date, showing if attempted or not  |\n");
-  printf("| viewassignment <assignment_id>    | details of a specified assignment                             |\n");
-  printf("| checkdates <start_date> <end_date>| check if there is an assignment within a specific time range  |\n");
   printf("|                                   |                                                               |\n");
   printf("+---------------------------------------------------------------------------------------------------+\n");
 
