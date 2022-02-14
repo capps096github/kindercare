@@ -208,7 +208,7 @@ void getAssignmentDetails(char *assingment)
   printf("+---------------------------+--------------------------+\n");
   printf("| -:- NUMBER OF CHARACTERS: |   %d\n", assignments.character_no);
   printf("+---------------------------+--------------------------+\n");
-  printf("| -:- ASSIGNMENT DURATION:  |   %d\n", assignments.time_difference);
+  printf("| -:- ASSIGNMENT DURATION:  |   %d\n seconds", assignments.time_difference);
   printf("+---------------------------+--------------------------+\n");
   printf("| -:- ATTEMPT STATUS:       |   %s\n", checkAssignmentStatus(assignments.assignment_id) == 1 ? "ATTEMPTED" : "NOT YET ATTEMPTED");
   printf("+---------------------------+--------------------------+\n\n");

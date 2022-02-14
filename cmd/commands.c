@@ -83,10 +83,7 @@ void klpCommands()
       {
         viewAssignmentInfo();
       }
-      else if (strcmp(command, checkstatus) == 0)
-      {
-        checkStatus();
-      }
+    
       else if (strcmp(command, attempt) == 0)
       {
         // read file and attempt assignment

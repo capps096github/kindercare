@@ -22,11 +22,6 @@ if (!isset($_SESSION["teacher_id"])) {
   <!-- CSS -->
   <link href="../../css/kindercare.css" rel="stylesheet" />
 
-  <!-- JS -->
-  <script src="kindercare.js"></script>
-
-
-
 </head>
 
 <!-- Body -->
