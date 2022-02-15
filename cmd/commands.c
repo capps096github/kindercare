@@ -8,7 +8,6 @@
 #include "assignments/assignment.c"
 
 // checkstatus
-#include "checkstatus/checkstatus.c"
 
 // activation
 // #include "assignments/request_activation.c"
