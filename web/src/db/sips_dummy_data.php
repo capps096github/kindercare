@@ -204,21 +204,164 @@ $sql_managers_data = "INSERT IGNORE INTO sips.managers (admin_id,username,email,
 ('SDC100','Edward Twahira','edwardtwahira@gmail.com','33333'),
 ('SDC233','Jolly Ssuka','ssukajolly@gmail.com','44444');";
 
-$sql_customers_data = "INSERT IGNORE INTO sips.customers (email,username,preferences,locationx,gender,passwordx) VALUES
+$sql_customers_data = "INSERT IGNORE INTO sips.customers (email,username,preferences,locationx,gender,passwordx) VALUES 
 ('ankundaandanter@gmail.com','Andante Ankunda','Wines:Beers','Kampala','F','12345'),
 ('simondesire001@gmail.com','Simon Desire','Wines:Beers','Kampala','M','11111'),
 ('cephasbrian12@gmail.com','Cephas Brian','Sodas','Kampala','M','22222'),
 ('edwardtwahira@gmail.com','Edward Twahira','Wines','Kampala','M','33333'),
-('ssukajolly@gmail.com','Jolly Ssuka','Juices','Kampala','M','44444');";
-
-
-
-$sql_orders_data = "INSERT IGNORE INTO sips.orders (user_email,quantity,product_id) VALUES
-('simondesire001@gmail.com',5,1),
-('cephasbrian12@gmail.com',2,12),
-('edwardtwahira@gmail.com',1,5),
-('ssukajolly@gmail.com',1,6);
+('ssukajolly@gmail.com','Jolly Ssuka','Juices','Kampala','M','44444');
 ";
+
+
+// `user_id` VARCHAR(30),
+// `name` varchar(255) NOT NULL,   
+// `price` decimal(10, 2) NOT NULL,  
+// `image_url` varchar(255) NOT NULL,
+// `quantity`
+
+$sql_orders_data = "INSERT IGNORE INTO sips.orders (user_id,name,price,image_url,quantity) VALUES
+(
+'simondesire001@gmail.com',
+'Orange Juice',
+ 1.99,
+'https://images.unsplash.com/photo-1597403491447-3ab08f8e44dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=375&q=80',
+5
+),
+(
+'edwardtwahira@gmail.com',
+'Orange Juice',
+ 1.99,
+'https://images.unsplash.com/photo-1597403491447-3ab08f8e44dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=375&q=80',
+5
+),
+(
+'edwardtwahira@gmail.com',
+'Orange Juice',
+ 1.99,
+'https://images.unsplash.com/photo-1597403491447-3ab08f8e44dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=375&q=80',
+5
+),
+(
+'simondesire001@gmail.com',
+'Orange Juice',
+ 1.99,
+'https://images.unsplash.com/photo-1597403491447-3ab08f8e44dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=375&q=80',
+5
+),
+(
+'ankundaandanter@gmail.com',
+'Orange Juice',
+ 1.99,
+'https://images.unsplash.com/photo-1597403491447-3ab08f8e44dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=375&q=80',
+5
+),
+(
+'ankundaandanter@gmail.com',
+'Orange Juice',
+ 1.99,
+'https://images.unsplash.com/photo-1597403491447-3ab08f8e44dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=375&q=80',
+5
+),
+(
+'ankundaandanter@gmail.com',
+'Orange Juice',
+ 1.99,
+'https://images.unsplash.com/photo-1597403491447-3ab08f8e44dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=375&q=80',
+5
+),
+(
+'ankundaandanter@gmail.com',
+'Orange Juice',
+ 1.99,
+'https://images.unsplash.com/photo-1597403491447-3ab08f8e44dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=375&q=80',
+5
+),
+(
+'ankundaandanter@gmail.com',
+'Orange Juice',
+ 1.99,
+'https://images.unsplash.com/photo-1597403491447-3ab08f8e44dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=375&q=80',
+5
+)
+
+";
+
+// likes data  `name` varchar(255) NOT NULL,   
+// `price` decimal(10, 2) NOT NULL,  
+// `image_url`
+$sql_likes_data =
+    "INSERT IGNORE INTO sips.likes (user_id,name,price,image_url ) VALUES
+(
+'edwardtwahira@gmail.com',
+'Orange Juice',
+ 1.99,
+'https://images.unsplash.com/photo-1597403491447-3ab08f8e44dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=375&q=80'
+),
+
+(
+'cephasbrian12@gmail.com',
+'Old Fashioned Cocktail',
+ 2.99,
+'https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
+        ),
+(
+'simondesire001@gmail.com',
+'Lemonade',
+3.99,
+'https://images.unsplash.com/photo-1437418747212-8d9709afab22?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'
+  ),
+
+(
+'ankundaandanter@gmail.com',
+'Mango Juice',
+ 4.99,
+'https://images.unsplash.com/photo-1546173159-315724a31696?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'
+        ),
+(
+'ankundaandanter@gmail.com',
+'Sliced Orange Juice',
+ 5.99,
+'https://images.unsplash.com/photo-1618724980108-a4d3856fd8f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80'
+       ),
+(
+'ankundaandanter@gmail.com',
+'Melon Juice',
+6.99,
+'https://images.unsplash.com/photo-1597306691225-69ef217a43cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=376&q=80'
+        ),
+(
+'ankundaandanter@gmail.com',
+'Seven Hils Wine',
+7.99,
+'https://images.unsplash.com/photo-1508253730651-e5ace80a7025?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
+        ),
+(
+'ankundaandanter@gmail.com',
+ 'Nederburg White Wine',
+ 8.99,
+ 'https://images.unsplash.com/photo-1547595628-c61a29f496f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'
+        ),
+(
+'ankundaandanter@gmail.com',
+'Fruit and Wine',
+ 9.99,
+ 'https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=391&q=80'
+        ),
+(
+'ankundaandanter@gmail.com',
+'Ondule Wine',
+ 10.99,
+ 'https://images.unsplash.com/photo-1600320183466-7198f22d3c8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80'
+        ),
+(
+'ankundaandanter@gmail.com',
+'Lambrusco Wine',
+ 11.99,
+'https://images.unsplash.com/photo-1606920301459-d66500c43ff6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=428&q=80'
+        )
+;
+";
+
 
 
 // check if the sips db was selected
@@ -259,7 +402,7 @@ if ($conn->select_db('sips') === TRUE) {
     // 
     // check if all queries were successful
     // if ($conn->query($sql_teachers_data) === TRUE && $conn->query($sql_pupils_data) === TRUE && $conn->query($sql_assignments_data) === TRUE && $conn->query($sql_registerpupils_data) === TRUE && $conn->query($sql_assignmentscore_data) === TRUE) {
-    if ($conn->query($sql_products_data) === TRUE &&  $conn->query($sql_staff_data) === TRUE && $conn->query($sql_managers_data) === TRUE && $conn->query($sql_customers_data) === TRUE && $conn->query($sql_orders_data) === TRUE) {
+    if ($conn->query($sql_products_data) === TRUE &&  $conn->query($sql_staff_data) === TRUE && $conn->query($sql_managers_data) === TRUE && $conn->query($sql_customers_data) === TRUE && $conn->query($sql_orders_data) === TRUE && $conn->query($sql_likes_data) === TRUE) {
         // set success message
         $_SESSION['settings_success'] = "Dummy Data Successfully!";
         // echo "Tables created successfully";

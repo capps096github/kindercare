@@ -27,6 +27,12 @@ $sql_managers = "DROP TABLE IF EXISTS sips.managers;";
 // customers score
 $sql_customers = "DROP TABLE IF EXISTS sips.customers;";
 
+// likes score
+$sql_likes = "DROP TABLE IF EXISTS sips.likes;";
+
+// orders score
+$sql_orders = "DROP TABLE IF EXISTS sips.orders;";
+
 // register pupils
 // $sql_registerpupils = "DROP TABLE IF EXISTS sips.registeredpupils;";
 
@@ -69,6 +75,8 @@ if ($conn->select_db('sips') === TRUE) {
     $conn->query($sql_products) === TRUE &&
     $conn->query($sql_staff) === TRUE &&
     $conn->query($sql_managers) === TRUE &&
+    $conn->query($sql_likes) === TRUE &&
+    $conn->query($sql_orders) === TRUE &&
     $conn->query($sql_customers) === TRUE
   ) {
     $_SESSION['settings_success'] = "Database Cleared Successfully!";

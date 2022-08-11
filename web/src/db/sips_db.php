@@ -49,12 +49,22 @@ $sql_customers = "CREATE TABLE IF NOT EXISTS sips.customers (
  `passwordx` VARCHAR(30) NOT NULL
 );";
 
-
 $sql_orders = "CREATE TABLE IF NOT EXISTS sips.orders (
- `order_id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
-`product_id` INT NOT NULL,
- `user_id` VARCHAR(30),
- `quantity` INT NOT NULL
+`order_id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+`user_id` VARCHAR(30),
+`name` varchar(255) NOT NULL,   
+`price` decimal(10, 2) NOT NULL,  
+`image_url` varchar(255) NOT NULL,
+`quantity` INT NOT NULL
+);";
+
+
+$sql_likes = "CREATE TABLE IF NOT EXISTS sips.likes (
+ `like_id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+ `user_id` VARCHAR(100),
+ `name` varchar(255) NOT NULL,   
+`price` decimal(10, 2) NOT NULL,  
+`image_url` varchar(255) NOT NULL
 );";
 
 
@@ -91,6 +101,12 @@ if ($conn->query($sql_db) === TRUE) {
     //
     // register pupils
     if ($conn->query($sql_orders) === TRUE) {
+        // echo "Table registeredpupils created successfully";
+    } else {
+        echo "Error creating table: " . $conn->error;
+    }
+
+    if ($conn->query($sql_likes) === TRUE) {
         // echo "Table registeredpupils created successfully";
     } else {
         echo "Error creating table: " . $conn->error;
